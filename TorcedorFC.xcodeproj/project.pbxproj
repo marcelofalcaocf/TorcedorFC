@@ -195,8 +195,8 @@
 			isa = PBXGroup;
 			children = (
 				14C5C81E28B698BE00300E6D /* ListaDeCampeonatoService.swift */,
-				14C5C82328B69E7200300E6D /* GerericService.swift */,
 				14C5C82828B6AA2600300E6D /* TabelaService.swift */,
+				14C5C82328B69E7200300E6D /* GerericService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";

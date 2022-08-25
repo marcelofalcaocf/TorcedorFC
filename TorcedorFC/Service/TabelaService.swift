@@ -14,6 +14,7 @@ protocol TabelaServiceProtocol: GenericService {
 class TabelaService: TabelaServiceProtocol {
     private let baseUrl: String = "https://api.api-futebol.com.br/v1/"
     private let keychain: String = "live_81f4054f57f2d6c1ea0f73996d5d57"
+    private let keychainTest: String = "test_2ada5f4c7bb777d3be168a3da854e0"
     
     func getAllListaDeCampeonatos(completion: @escaping completion<[TabelaBrasileiraoElement]?>) {
         guard let url = URL(string: "\(baseUrl)campeonatos/10/tabela") else {
