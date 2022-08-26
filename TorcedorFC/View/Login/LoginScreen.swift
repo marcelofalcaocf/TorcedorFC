@@ -72,7 +72,7 @@ class LoginScreen: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Esqueceu a senha?", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
-        button.setTitleColor(UIColor(red: 32/255, green: 43/255, blue: 59/255, alpha: 1.0), for: .normal)
+        button.setTitleColor(UIColor(red: 32/255, green: 43/255, blue: 59/255, alpha: 1.0), for: .normal) //verde claro
         button.addTarget(self, action: #selector(self.tappedForgotPasswordButton), for: .touchUpInside)
         return button
     }()
@@ -85,7 +85,7 @@ class LoginScreen: UIView {
         button.setTitleColor(.white , for: .normal)
         button.clipsToBounds = true
         button.layer.cornerRadius = 7.5
-        button.backgroundColor = UIColor(red: 32/255, green: 43/255, blue: 59/255, alpha: 1.0)
+        button.backgroundColor = UIColor(red: 32/255, green: 43/255, blue: 59/255, alpha: 1.0) // azul escuro
         button.addTarget(self, action: #selector(self.tappedLoginButton), for: .touchUpInside)
         return button
     }()
@@ -147,7 +147,7 @@ class LoginScreen: UIView {
     }
     
     private func configBackGround() {
-        self.backgroundColor = UIColor(red: 91/255, green: 172/255, blue: 160/255, alpha: 1.0)
+        self.backgroundColor = UIColor(red: 91/255, green: 172/255, blue: 160/255, alpha: 1.0) //verde
     }
     
     private func configSuperView() {

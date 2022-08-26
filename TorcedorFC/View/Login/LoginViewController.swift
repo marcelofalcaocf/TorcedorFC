@@ -36,12 +36,13 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController: LoginScreenProtocol {
     func actionLoginButton() {
-        let vc: HomeViewController = HomeViewController()
+        let vc: TabBarController = TabBarController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func actionForgotPasswordButton() {
-        print("está funcionando")
+        let vc: ForgotPasswordViewController = ForgotPasswordViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func actionLoginGoogleButton() {
@@ -53,7 +54,8 @@ extension LoginViewController: LoginScreenProtocol {
     }
     
     func actionRegisterPasswordButton() {
-        print("está funcionando")
+        let vc: RegisterViewController = RegisterViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     

@@ -9,21 +9,48 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .red
-        // Do any additional setup after loading the view.
+    var homeScreen: HomeScreen = .init()
+    let viewModel: ListaDeCampeonatoViewModel = .init()
+    
+    override func loadView() {
+        self.homeScreen = HomeScreen()
+        self.view = self.homeScreen
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.viewModel.delegate(delegate: self)
+        self.homeScreen.configTableViewProtocols(delegate: self, dataSource: self)
+        viewModel.getCampeonatos()
     }
-    */
 
+}
+
+extension HomeViewController: ListaDeCampeonatoViewModelDelegate {
+    func success() {
+        DispatchQueue.main.async {
+            self.homeScreen.tableView.reloadData()
+        }
+    }
+    func error() {
+        print("Deu errado")
+    }
+}
+
+extension HomeViewController: UITableViewDelegate {
+    
+}
+
+extension HomeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.numberOfRow
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell: ChampionshipsTableViewCell = tableView.dequeueReusableCell(withIdentifier: ChampionshipsTableViewCell.identifier, for: indexPath) as? ChampionshipsTableViewCell {
+            cell.setUpCell(data: self.viewModel.campeonatos[indexPath.row])
+            return cell
+        }
+        return UITableViewCell()
+    }
 }

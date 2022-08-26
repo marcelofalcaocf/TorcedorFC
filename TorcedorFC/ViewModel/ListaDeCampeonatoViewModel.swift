@@ -36,6 +36,10 @@ class ListaDeCampeonatoViewModel {
         self.tabelaDelegate = delegate
     }
     
+    var numberOfRow: Int {
+        return campeonatos.count
+    }
+    
     func getCampeonatos() {
         service.getAllListaDeCampeonatos { success, error in
             if let success = success {
