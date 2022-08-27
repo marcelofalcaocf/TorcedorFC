@@ -9,9 +9,14 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    var profileScreen: ProfileScreen = .init()
+    
+    override func loadView() {
+        self.profileScreen = ProfileScreen()
+        self.view = self.profileScreen
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .orange
       //  self.title = "Profile"
         // Do any additional setup after loading the view.
     }

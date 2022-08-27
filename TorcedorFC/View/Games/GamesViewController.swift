@@ -9,9 +9,15 @@ import UIKit
 
 class GamesViewController: UIViewController {
 
+    var gamesScreen: GamesScreen = .init()
+    
+    override func loadView() {
+        self.gamesScreen = GamesScreen()
+        self.view = self.gamesScreen
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .darkGray
        // self.title = "Games"
         // Do any additional setup after loading the view.
     }

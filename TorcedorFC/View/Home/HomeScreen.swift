@@ -24,7 +24,7 @@ class HomeScreen: UIView {
         return image
     }()
     
-    lazy var welcomeName: UILabel = {
+    lazy var welcomeNameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = UIColor(red: 32/255, green: 43/255, blue: 59/255, alpha: 1.0)
@@ -66,7 +66,7 @@ class HomeScreen: UIView {
         self.configSuperView()
         
         self.configBackgrondOnTop()
-        self.configWelcomeName()
+        self.configWelcomeNameLabel()
         self.configLogoAppImageView()
         self.configCampLabel()
         self.configInformationLabel()
@@ -84,7 +84,7 @@ class HomeScreen: UIView {
     
     private func configSuperView() {
         self.addSubview(self.backgrondOnTop)
-        self.backgrondOnTop.addSubview(self.welcomeName)
+        self.backgrondOnTop.addSubview(self.welcomeNameLabel)
         self.backgrondOnTop.addSubview(self.logoAppImageView)
         self.backgrondOnTop.addSubview(self.campLabel)
         self.addSubview(self.informationLabel)
@@ -103,8 +103,8 @@ class HomeScreen: UIView {
         }
     }
     
-    func configWelcomeName() {
-        self.welcomeName.snp.makeConstraints { make in
+    func configWelcomeNameLabel() {
+        self.welcomeNameLabel.snp.makeConstraints { make in
             make.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(15)
             make.leading.equalToSuperview().offset(20)
             make.height.equalTo(45)
@@ -121,7 +121,7 @@ class HomeScreen: UIView {
     
     func configCampLabel() {
         self.campLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.welcomeName.snp.bottom).offset(20)
+            make.top.equalTo(self.welcomeNameLabel.snp.bottom).offset(20)
             make.leading.equalToSuperview().offset(10)
         }
     }

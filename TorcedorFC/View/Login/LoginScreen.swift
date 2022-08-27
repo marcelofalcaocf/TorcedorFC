@@ -72,7 +72,7 @@ class LoginScreen: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Esqueceu a senha?", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
-        button.setTitleColor(UIColor(red: 32/255, green: 43/255, blue: 59/255, alpha: 1.0), for: .normal) //verde claro
+        button.setTitleColor(UIColor(red: 32/255, green: 43/255, blue: 59/255, alpha: 1.0), for: .normal) //Azul
         button.addTarget(self, action: #selector(self.tappedForgotPasswordButton), for: .touchUpInside)
         return button
     }()
