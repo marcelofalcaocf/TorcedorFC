@@ -55,6 +55,7 @@ class HomeScreen: UIView {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = .clear
+        tableView.layer.cornerRadius = 10
         tableView.register(ChampionshipsTableViewCell.self, forCellReuseIdentifier: ChampionshipsTableViewCell.identifier)
         return tableView
     }()
@@ -135,8 +136,9 @@ class HomeScreen: UIView {
     func configTableView() {
         self.tableView.snp.makeConstraints { make in
             make.top.equalTo(self.informationLabel.snp.bottom).offset(10)
-            make.leading.trailing.equalToSuperview()
-            make.bottom.equalToSuperview()
+            make.leading.equalToSuperview().offset(15)
+            make.trailing.equalToSuperview().inset(15)
+            make.bottom.equalToSuperview().inset(20)
         }
     }
 }

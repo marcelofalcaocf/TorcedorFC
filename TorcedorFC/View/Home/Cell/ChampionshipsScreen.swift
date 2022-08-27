@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChampionshipsView: UIView {
+class ChampionshipsScreen: UIView {
 
     lazy var champImageView: UIImageView = {
         let image = UIImageView()
@@ -18,6 +18,9 @@ class ChampionshipsView: UIView {
  
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.configSuperView()
+        
+        self.configChampImageView()
     }
     
     func configSuperView() {
@@ -30,7 +33,7 @@ class ChampionshipsView: UIView {
     
     func configChampImageView() {
         self.champImageView.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(20)
+            make.top.equalToSuperview().offset(10)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().inset(20)
             make.height.equalTo(190)

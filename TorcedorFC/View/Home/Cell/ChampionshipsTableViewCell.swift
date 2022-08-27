@@ -12,8 +12,8 @@ class ChampionshipsTableViewCell: UITableViewCell {
 
     static let identifier: String = "ChampionshipsTableViewCell"
     
-    lazy var championshipsView: ChampionshipsView = {
-        let view = ChampionshipsView()
+    lazy var championshipsView: ChampionshipsScreen = {
+        let view = ChampionshipsScreen()
         return view
     }()
     
@@ -30,7 +30,7 @@ class ChampionshipsTableViewCell: UITableViewCell {
     
     public func setUpCell(data: ListaDeCampeonato) {
         guard let url = URL(string: data.logo) else { return }
-      //  self.championshipsView.champImageView.image = UIImage(named: data.logo)
+       // self.championshipsView.champImageView.image = UIImage(named: data.logo)
         self.championshipsView.champImageView.kf.setImage(with: url)
     }
     

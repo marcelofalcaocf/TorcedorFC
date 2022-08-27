@@ -23,24 +23,20 @@ class TabBarController: UITabBarController {
 //        let viewProfile = UINavigationController(rootViewController: ProfileViewController())
 //
         self.setViewControllers([HomeViewController(), GamesViewController(), TCViewController(), MyFavoritesViewController(), ProfileViewController()], animated: false)
-        self.tabBar.backgroundColor = .white
+        self.tabBar.backgroundColor = UIColor(red: 91/255, green: 172/255, blue: 160/255, alpha: 1.0)
+        self.tabBarItem.badgeColor = .white
         self.tabBar.isTranslucent = false
         
         guard let items = tabBar.items else { return }
         
-        items[0].title = "Camp"
         items[0].image = UIImage(systemName: "house")
         
-        items[1].title = "Jogos"
         items[1].image = UIImage(systemName: "flag.2.crossed")
         
-        items[2].title = "Características"
         items[2].image = UIImage(systemName: "list.bullet")
         
-        items[3].title = "Favoritos"
         items[3].image = UIImage(systemName: "star.fill")
         
-        items[4].title = "Perfil"
         items[4].image = UIImage(systemName: "person.fill")
     }
 }

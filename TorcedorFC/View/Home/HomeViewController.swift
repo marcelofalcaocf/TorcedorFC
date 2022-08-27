@@ -38,7 +38,9 @@ extension HomeViewController: ListaDeCampeonatoViewModelDelegate {
 }
 
 extension HomeViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 210
+    }
 }
 
 extension HomeViewController: UITableViewDataSource {
@@ -54,3 +56,5 @@ extension HomeViewController: UITableViewDataSource {
         return UITableViewCell()
     }
 }
+
+
