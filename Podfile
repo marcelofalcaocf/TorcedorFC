@@ -8,9 +8,7 @@ target 'TorcedorFC' do
   # Pods for TorcedorFC
 	pod 'Alamofire'
 	pod 'Kingfisher', '~> 7.0'
-  	pod 'FirebaseAuth'
-	pod 'FirebaseFirestore'
-  	pod 'GoogleSignIn'
+	pod 'DropDown' 
 	pod 'SnapKit', '~> 5.0.0'
 
 end

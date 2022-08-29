@@ -9,9 +9,15 @@ import UIKit
 
 class TCViewController: UIViewController {
 
+    var tcScreen: TCScreen?
+    
+    override func loadView() {
+        self.tcScreen = TCScreen()
+        self.view = self.tcScreen
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .green
       //  self.title = "TC"
         // Do any additional setup after loading the view.
     }

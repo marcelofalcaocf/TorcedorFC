@@ -23,6 +23,8 @@
 		14C23D6828B9578B00C34A6E /* ChampionshipsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C23D6728B9578B00C34A6E /* ChampionshipsScreen.swift */; };
 		14C23D6A28BA7F6C00C34A6E /* GamesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C23D6928BA7F6C00C34A6E /* GamesScreen.swift */; };
 		14C23D6C28BAAB3B00C34A6E /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C23D6B28BAAB3B00C34A6E /* ProfileScreen.swift */; };
+		14C23D6E28BBD0F000C34A6E /* MyFavoritesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C23D6D28BBD0F000C34A6E /* MyFavoritesScreen.swift */; };
+		14C23DAF28BD33BE00C34A6E /* TCScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C23DAE28BD33BE00C34A6E /* TCScreen.swift */; };
 		14C5C7EB28B697CC00300E6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C5C7EA28B697CC00300E6D /* AppDelegate.swift */; };
 		14C5C7ED28B697CC00300E6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C5C7EC28B697CC00300E6D /* SceneDelegate.swift */; };
 		14C5C7EF28B697CC00300E6D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C5C7EE28B697CC00300E6D /* LoginViewController.swift */; };
@@ -78,6 +80,8 @@
 		14C23D6728B9578B00C34A6E /* ChampionshipsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionshipsScreen.swift; sourceTree = "<group>"; };
 		14C23D6928BA7F6C00C34A6E /* GamesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesScreen.swift; sourceTree = "<group>"; };
 		14C23D6B28BAAB3B00C34A6E /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
+		14C23D6D28BBD0F000C34A6E /* MyFavoritesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavoritesScreen.swift; sourceTree = "<group>"; };
+		14C23DAE28BD33BE00C34A6E /* TCScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCScreen.swift; sourceTree = "<group>"; };
 		14C5C7E728B697CC00300E6D /* TorcedorFC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TorcedorFC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14C5C7EA28B697CC00300E6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14C5C7EC28B697CC00300E6D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -211,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				14C23D5A28B9336400C34A6E /* TCViewController.swift */,
+				14C23DAE28BD33BE00C34A6E /* TCScreen.swift */,
 			);
 			path = TeamCharacteristics;
 			sourceTree = "<group>";
@@ -219,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				14C23D5C28B9337100C34A6E /* MyFavoritesViewController.swift */,
+				14C23D6D28BBD0F000C34A6E /* MyFavoritesScreen.swift */,
 			);
 			path = MyFavorites;
 			sourceTree = "<group>";
@@ -580,6 +586,7 @@
 				14C5C7EB28B697CC00300E6D /* AppDelegate.swift in Sources */,
 				14C23D5F28B9338B00C34A6E /* GamesViewController.swift in Sources */,
 				14C5C7F528B697CC00300E6D /* TorcedorFC.xcdatamodeld in Sources */,
+				14C23D6E28BBD0F000C34A6E /* MyFavoritesScreen.swift in Sources */,
 				14C23D6A28BA7F6C00C34A6E /* GamesScreen.swift in Sources */,
 				14C23D6628B9555900C34A6E /* ChampionshipsTableViewCell.swift in Sources */,
 				14C5C81F28B698BE00300E6D /* ListaDeCampeonatoService.swift in Sources */,
@@ -588,6 +595,7 @@
 				14C23D5028B85A4800C34A6E /* ForgotPasswordScreen.swift in Sources */,
 				14C23D6C28BAAB3B00C34A6E /* ProfileScreen.swift in Sources */,
 				14C23D2F28B7C79A00C34A6E /* LoginScreen.swift in Sources */,
+				14C23DAF28BD33BE00C34A6E /* TCScreen.swift in Sources */,
 				14C23D5D28B9337100C34A6E /* MyFavoritesViewController.swift in Sources */,
 				14C23D3728B83BD300C34A6E /* RegisterScreen.swift in Sources */,
 				14C23D6828B9578B00C34A6E /* ChampionshipsScreen.swift in Sources */,

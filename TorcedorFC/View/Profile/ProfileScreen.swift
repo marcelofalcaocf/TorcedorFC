@@ -49,7 +49,8 @@ class ProfileScreen: UIView {
         label.backgroundColor = UIColor(red: 217/255, green: 217/255, blue: 217/255, alpha: 0.40)
         label.textColor = UIColor(red: 32/255, green: 43/255, blue: 59/255, alpha: 1.0)
         label.font = UIFont.boldSystemFont(ofSize: 18)
-        label.text = "E-mail: marcelo_falcaoc@gmail.com"
+        label.textAlignment = .center
+        label.text = "marcelo_falcaoc@gmail.com"
         return label
     }()
     
@@ -59,6 +60,7 @@ class ProfileScreen: UIView {
         label.backgroundColor = UIColor(red: 217/255, green: 217/255, blue: 217/255, alpha: 0.40)
         label.textColor = UIColor(red: 32/255, green: 43/255, blue: 59/255, alpha: 1.0)
         label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.textAlignment = .center
         label.text = "Time do coração"
         return label
     }()
@@ -79,7 +81,7 @@ class ProfileScreen: UIView {
     lazy var resetPasswordButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Redefinir Senha", for: .focused)
+        button.setTitle("Redefinir Senha", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 20)
         button.setTitleColor(UIColor(red: 32/255, green: 43/255, blue: 59/255, alpha: 1.0) , for: .normal)
         button.clipsToBounds = true
@@ -112,7 +114,10 @@ class ProfileScreen: UIView {
         self.configUserImageView()
         self.configNameLabel()
         self.configEmailLabel()
-      //  self.configFavoriteTimeLabel()
+        self.configFavoriteTimeLabel()
+        self.configFavoriteTimeButton()
+        self.configResetPasswordButton()
+        self.configExitAppButton()
     }
     
     private func configBackGround() {
@@ -125,7 +130,10 @@ class ProfileScreen: UIView {
         self.backgrondOnTop.addSubview(self.userImageView)
         self.addSubview(nameLabel)
         self.addSubview(emailLabel)
-      //  self.addSubview(favoriteTimeLabel)
+        self.addSubview(favoriteTimeLabel)
+        self.addSubview(favoriteTimeButton)
+        self.addSubview(resetPasswordButton)
+        self.addSubview(exitAppButton)
     }
     
     required init?(coder: NSCoder) {
@@ -174,12 +182,39 @@ class ProfileScreen: UIView {
         }
     }
     
-//    func configFavoriteTimeLabel() {
-//        self.favoriteTimeLabel.snp.makeConstraints { make in
-//            make.top.equalTo(self.emailLabel.snp.bottom).offset(20)
-//            make.leading.equalTo(self.emailLabel.snp.leading)
-//            make.trailing.equalTo(self.emailLabel.snp.trailing)
-//            make.height.equalTo(self.emailLabel.snp.bottom)
-//        }
-//    }
+    func configFavoriteTimeLabel() {
+        self.favoriteTimeLabel.snp.makeConstraints { make in
+            make.top.equalTo(self.emailLabel.snp.bottom).offset(20)
+            make.leading.equalTo(self.emailLabel.snp.leading)
+            make.trailing.equalTo(self.emailLabel.snp.trailing)
+            make.height.equalTo(self.emailLabel.snp.height)
+        }
+    }
+    
+    func configFavoriteTimeButton() {
+        self.favoriteTimeButton.snp.makeConstraints { make in
+            make.top.equalTo(self.favoriteTimeLabel.snp.bottom).offset(20)
+            make.leading.equalToSuperview().offset(80)
+            make.trailing.equalToSuperview().inset(80)
+            make.height.equalTo(35)
+        }
+    }
+    
+    func configResetPasswordButton() {
+        self.resetPasswordButton.snp.makeConstraints { make in
+            make.top.equalTo(self.favoriteTimeButton.snp.bottom).offset(20)
+            make.leading.equalTo(self.favoriteTimeButton.snp.leading)
+            make.trailing.equalTo(self.favoriteTimeButton.snp.trailing)
+            make.height.equalTo(self.favoriteTimeButton.snp.height)
+        }
+    }
+    
+    func configExitAppButton() {
+        self.exitAppButton.snp.makeConstraints { make in
+            make.bottom.equalToSuperview().inset(20)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().inset(20)
+            make.height.equalTo(45)
+        }
+    }
 }

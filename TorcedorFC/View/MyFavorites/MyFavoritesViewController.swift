@@ -9,9 +9,14 @@ import UIKit
 
 class MyFavoritesViewController: UIViewController {
 
+    var myFavoritesScreen: MyFavoritesScreen = .init()
+    
+    override func loadView() {
+        self.myFavoritesScreen = MyFavoritesScreen()
+        self.view = self.myFavoritesScreen
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
        // self.title = "MyFavorites"
         // Do any additional setup after loading the view.
     }
