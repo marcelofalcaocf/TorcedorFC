@@ -38,6 +38,10 @@ extension HomeViewController: ListaDeCampeonatoViewModelDelegate {
 }
 
 extension HomeViewController: UITableViewDelegate {
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        print("DELEGATE")
+//    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 210
     }
