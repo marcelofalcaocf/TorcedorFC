@@ -30,7 +30,6 @@ class ChampionshipsTableViewCell: UITableViewCell {
     
     public func setUpCell(data: ListaDeCampeonato) {
         guard let url = URL(string: data.logo) else { return }
-       // self.championshipsView.champImageView.image = UIImage(named: data.logo)
         self.championshipsView.champImageView.kf.setImage(with: url)
     }
     

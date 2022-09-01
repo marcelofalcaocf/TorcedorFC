@@ -22,10 +22,7 @@ class LoginViewController: UIViewController {
         self.loginScreen?.delegate(delegate: self)
     
         viewModel.delegate(delegate: self)
-        viewModel.tabelaDelegate(delegate: self)
-        
         viewModel.getCampeonatos()
-        viewModel.getTabela()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,15 +66,5 @@ extension LoginViewController: ListaDeCampeonatoViewModelDelegate {
     
     func error() {
         print("Deu ruim")
-    }
-}
-
-extension LoginViewController: TabelaViewModelDelegate {
-    func tabelaSuccess() {
-        print("Deu bom na tabela")
-    }
-    
-    func tabelaError() {
-        print("Deu ruim na tabela")
     }
 }

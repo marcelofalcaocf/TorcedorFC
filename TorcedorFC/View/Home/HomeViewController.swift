@@ -30,17 +30,22 @@ extension HomeViewController: ListaDeCampeonatoViewModelDelegate {
     func success() {
         DispatchQueue.main.async {
             self.homeScreen.tableView.reloadData()
+            print(self.viewModel.filterCampeonatos)
         }
     }
+    
     func error() {
         print("Deu errado")
     }
 }
 
 extension HomeViewController: UITableViewDelegate {
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        print("DELEGATE")
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let vc: GameTableViewController = GameTableViewController()
+        vc.campeonatoId = viewModel.getCampeonatoId(indexPath: indexPath.row)
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 210
@@ -54,7 +59,7 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell: ChampionshipsTableViewCell = tableView.dequeueReusableCell(withIdentifier: ChampionshipsTableViewCell.identifier, for: indexPath) as? ChampionshipsTableViewCell {
-            cell.setUpCell(data: self.viewModel.campeonatos[indexPath.row])
+            cell.setUpCell(data: self.viewModel.filterCampeonatos[indexPath.row])
             return cell
         }
         return UITableViewCell()

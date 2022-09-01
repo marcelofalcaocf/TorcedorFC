@@ -8,7 +8,7 @@
 import Foundation
 
 protocol TabelaServiceProtocol: GenericService {
-    func getAllListaDeCampeonatos(completion: @escaping completion<[TabelaBrasileiraoElement]?>)
+    func getAllListaDeCampeonatos(id: Int, completion: @escaping completion<[TabelaBrasileiraoElement]?>)
 }
 
 class TabelaService: TabelaServiceProtocol {
@@ -16,8 +16,8 @@ class TabelaService: TabelaServiceProtocol {
     private let keychain: String = "live_81f4054f57f2d6c1ea0f73996d5d57"
     private let keychainTest: String = "test_2ada5f4c7bb777d3be168a3da854e0"
     
-    func getAllListaDeCampeonatos(completion: @escaping completion<[TabelaBrasileiraoElement]?>) {
-        guard let url = URL(string: "\(baseUrl)campeonatos/10/tabela") else {
+    func getAllListaDeCampeonatos(id: Int ,completion: @escaping completion<[TabelaBrasileiraoElement]?>) {
+        guard let url = URL(string: "\(baseUrl)campeonatos/\(id)/tabela") else {
             return completion(nil, Error.errorDescription(message: "Erro De URL"))
         }
         
