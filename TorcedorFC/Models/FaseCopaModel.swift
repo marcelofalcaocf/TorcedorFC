@@ -7,8 +7,6 @@
 
 import Foundation
 
-class FaseCopaViewModel {
-
     // MARK: - FasesCopaElement
     struct FasesCopaElement: Codable {
         let faseID: Int
@@ -306,4 +304,3 @@ class FaseCopaViewModel {
         }
     }
 
-}

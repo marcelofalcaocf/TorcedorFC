@@ -10,7 +10,12 @@
 		142D5E3D28C00452002BA5EC /* GameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D5E3C28C00452002BA5EC /* GameTableViewController.swift */; };
 		142D5E3F28C0046C002BA5EC /* GameTableScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D5E3E28C0046C002BA5EC /* GameTableScreen.swift */; };
 		142D5E4128C02BF9002BA5EC /* GameTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D5E4028C02BF9002BA5EC /* GameTableViewModel.swift */; };
-		142D5E4328C039C5002BA5EC /* FasesCopaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D5E4228C039C5002BA5EC /* FasesCopaViewModel.swift */; };
+		142D5E4328C039C5002BA5EC /* FaseCopaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D5E4228C039C5002BA5EC /* FaseCopaModel.swift */; };
+		142D5E4628C26890002BA5EC /* GamesDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D5E4528C26890002BA5EC /* GamesDetailScreen.swift */; };
+		142D5E4828C268AF002BA5EC /* GamesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D5E4728C268AF002BA5EC /* GamesDetailViewController.swift */; };
+		142D5E4A28C270D5002BA5EC /* FasesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D5E4928C270D5002BA5EC /* FasesService.swift */; };
+		142D5E4D28C28244002BA5EC /* DetailChampsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D5E4C28C28244002BA5EC /* DetailChampsTableViewCell.swift */; };
+		142D5E4F28C28265002BA5EC /* DetailChampsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D5E4E28C28265002BA5EC /* DetailChampsScreen.swift */; };
 		14C23D2F28B7C79A00C34A6E /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C23D2E28B7C79A00C34A6E /* LoginScreen.swift */; };
 		14C23D3228B823DF00C34A6E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C23D3128B823DF00C34A6E /* HomeViewController.swift */; };
 		14C23D3528B83BB900C34A6E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C23D3428B83BB900C34A6E /* RegisterViewController.swift */; };
@@ -71,7 +76,12 @@
 		142D5E3C28C00452002BA5EC /* GameTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewController.swift; sourceTree = "<group>"; };
 		142D5E3E28C0046C002BA5EC /* GameTableScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableScreen.swift; sourceTree = "<group>"; };
 		142D5E4028C02BF9002BA5EC /* GameTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewModel.swift; sourceTree = "<group>"; };
-		142D5E4228C039C5002BA5EC /* FasesCopaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FasesCopaViewModel.swift; sourceTree = "<group>"; };
+		142D5E4228C039C5002BA5EC /* FaseCopaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaseCopaModel.swift; sourceTree = "<group>"; };
+		142D5E4528C26890002BA5EC /* GamesDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesDetailScreen.swift; sourceTree = "<group>"; };
+		142D5E4728C268AF002BA5EC /* GamesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesDetailViewController.swift; sourceTree = "<group>"; };
+		142D5E4928C270D5002BA5EC /* FasesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FasesService.swift; sourceTree = "<group>"; };
+		142D5E4C28C28244002BA5EC /* DetailChampsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailChampsTableViewCell.swift; sourceTree = "<group>"; };
+		142D5E4E28C28265002BA5EC /* DetailChampsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailChampsScreen.swift; sourceTree = "<group>"; };
 		14C23D2E28B7C79A00C34A6E /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		14C23D3128B823DF00C34A6E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		14C23D3428B83BB900C34A6E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -154,8 +164,27 @@
 			children = (
 				142D5E3C28C00452002BA5EC /* GameTableViewController.swift */,
 				142D5E3E28C0046C002BA5EC /* GameTableScreen.swift */,
+				142D5E4B28C281E4002BA5EC /* Cell */,
 			);
 			path = GameTable;
+			sourceTree = "<group>";
+		};
+		142D5E4428C2686E002BA5EC /* GamesDetail */ = {
+			isa = PBXGroup;
+			children = (
+				142D5E4528C26890002BA5EC /* GamesDetailScreen.swift */,
+				142D5E4728C268AF002BA5EC /* GamesDetailViewController.swift */,
+			);
+			path = GamesDetail;
+			sourceTree = "<group>";
+		};
+		142D5E4B28C281E4002BA5EC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				142D5E4C28C28244002BA5EC /* DetailChampsTableViewCell.swift */,
+				142D5E4E28C28265002BA5EC /* DetailChampsScreen.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		14C23D2C28B7C72700C34A6E /* View */ = {
@@ -225,6 +254,7 @@
 			children = (
 				14C23D5E28B9338B00C34A6E /* GamesViewController.swift */,
 				14C23D6928BA7F6C00C34A6E /* GamesScreen.swift */,
+				142D5E4428C2686E002BA5EC /* GamesDetail */,
 			);
 			path = Games;
 			sourceTree = "<group>";
@@ -327,6 +357,7 @@
 				14C5C81E28B698BE00300E6D /* ListaDeCampeonatoService.swift */,
 				14C5C82828B6AA2600300E6D /* TabelaService.swift */,
 				14C5C82328B69E7200300E6D /* GerericService.swift */,
+				142D5E4928C270D5002BA5EC /* FasesService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -336,7 +367,7 @@
 			children = (
 				14C5C82128B69A8F00300E6D /* ListaDeCampeonatosModel.swift */,
 				14C5C82A28B6AB1200300E6D /* TabelaBrasileiraoModel.swift */,
-				142D5E4228C039C5002BA5EC /* FasesCopaViewModel.swift */,
+				142D5E4228C039C5002BA5EC /* FaseCopaModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -604,6 +635,7 @@
 				14C5C82428B69E7200300E6D /* GerericService.swift in Sources */,
 				14C5C82B28B6AB1200300E6D /* TabelaBrasileiraoModel.swift in Sources */,
 				14C23D6128B9339C00C34A6E /* ProfileViewController.swift in Sources */,
+				142D5E4F28C28265002BA5EC /* DetailChampsScreen.swift in Sources */,
 				14C5C7EB28B697CC00300E6D /* AppDelegate.swift in Sources */,
 				142D5E3F28C0046C002BA5EC /* GameTableScreen.swift in Sources */,
 				14C23D5F28B9338B00C34A6E /* GamesViewController.swift in Sources */,
@@ -615,14 +647,18 @@
 				14C23D5B28B9336400C34A6E /* TCViewController.swift in Sources */,
 				14C5C7ED28B697CC00300E6D /* SceneDelegate.swift in Sources */,
 				14C23D5028B85A4800C34A6E /* ForgotPasswordScreen.swift in Sources */,
-				142D5E4328C039C5002BA5EC /* FasesCopaViewModel.swift in Sources */,
+				142D5E4628C26890002BA5EC /* GamesDetailScreen.swift in Sources */,
+				142D5E4328C039C5002BA5EC /* FaseCopaModel.swift in Sources */,
 				14C23D6C28BAAB3B00C34A6E /* ProfileScreen.swift in Sources */,
+				142D5E4828C268AF002BA5EC /* GamesDetailViewController.swift in Sources */,
+				142D5E4D28C28244002BA5EC /* DetailChampsTableViewCell.swift in Sources */,
 				14C23D2F28B7C79A00C34A6E /* LoginScreen.swift in Sources */,
 				14C23DAF28BD33BE00C34A6E /* TCScreen.swift in Sources */,
 				14C23D5D28B9337100C34A6E /* MyFavoritesViewController.swift in Sources */,
 				14C23D3728B83BD300C34A6E /* RegisterScreen.swift in Sources */,
 				14C23D6828B9578B00C34A6E /* ChampionshipsScreen.swift in Sources */,
 				14C23D4E28B85A2300C34A6E /* ForgotPasswordViewController.swift in Sources */,
+				142D5E4A28C270D5002BA5EC /* FasesService.swift in Sources */,
 				14C23D3528B83BB900C34A6E /* RegisterViewController.swift in Sources */,
 				14C5C82228B69A8F00300E6D /* ListaDeCampeonatosModel.swift in Sources */,
 				14C23D3228B823DF00C34A6E /* HomeViewController.swift in Sources */,

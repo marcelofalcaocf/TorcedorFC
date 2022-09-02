@@ -18,6 +18,10 @@ class GameTableViewModel {
     private let tabelaService: TabelaService = .init()
     var tabela: [TabelaBrasileiraoElement] = []
     
+    private var faseService: FaseService = .init()
+    var fase: [FasesCopaElement] = []
+    
+    
     public func tabelaDelegate(delegate: GameTableViewModelDelegate) {
         self.tabelaDelegate = delegate
     }
@@ -33,8 +37,17 @@ class GameTableViewModel {
                     self.tabelaDelegate?.tabelaError()
                 }
             }
+        case 2:
+            faseService.getAllListaDeCampeonatos(id: id) { success, error in
+                if let success = success {
+                    self.fase = success
+                    self.tabelaDelegate?.tabelaSuccess()
+                } else {
+                    self.tabelaDelegate?.tabelaError()
+                }
+            }
         default:
-            print("Sem requisição")
+            break
         }
         
     }

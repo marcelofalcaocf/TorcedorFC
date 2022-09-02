@@ -65,6 +65,7 @@ class GameTableScreen: UIView {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = .darkGray
         tableView.layer.cornerRadius = 10
+        tableView.register(DetailChampsTableViewCell.self, forCellReuseIdentifier: DetailChampsTableViewCell.identifier)
         return tableView
     }()
     

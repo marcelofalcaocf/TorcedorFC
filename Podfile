@@ -10,7 +10,7 @@ target 'TorcedorFC' do
 	pod 'Kingfisher', '~> 7.0'
 	pod 'DropDown' 
 	pod 'SnapKit', '~> 5.0.0'
-
+	pod 'TinyConstraints', '~> 4.0.0'
 end
 
 
