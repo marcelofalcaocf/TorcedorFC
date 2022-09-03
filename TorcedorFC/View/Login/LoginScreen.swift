@@ -192,12 +192,12 @@ class LoginScreen: UIView {
             make.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(30)
             make.leading.equalToSuperview().offset(50)
             make.trailing.equalToSuperview().inset(50)
-            make.height.equalTo(167)
+            make.height.equalTo(130)
         }
     }
     func configWelcomeLabel() {
         self.welcomeLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.logoAppImageView.snp.bottom).offset(20)
+            make.top.equalTo(self.logoAppImageView.snp.bottom).offset(10)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().inset(20)
             make.height.equalTo(45)
@@ -206,7 +206,7 @@ class LoginScreen: UIView {
     
     func configEmailTextField() {
         self.emailTextField.snp.makeConstraints { make in
-            make.top.equalTo(self.welcomeLabel.snp.bottom).offset(18)
+            make.top.equalTo(self.welcomeLabel.snp.bottom).offset(10)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().inset(20)
             make.height.equalTo(45)
@@ -215,7 +215,7 @@ class LoginScreen: UIView {
     
     func configPasswordTextField() {
         self.passwordTextField.snp.makeConstraints { make in
-            make.top.equalTo(self.emailTextField.snp.bottom).offset(20)
+            make.top.equalTo(self.emailTextField.snp.bottom).offset(15)
             make.leading.equalTo(self.emailTextField.snp.leading)
             make.trailing.equalTo(self.emailTextField.snp.trailing)
             make.height.equalTo(self.emailTextField.snp.height)
@@ -224,14 +224,14 @@ class LoginScreen: UIView {
     
     func configForgoutPasswordButton() {
         self.forgoutPasswordButton.snp.makeConstraints { make in
-            make.top.equalTo(self.passwordTextField.snp.bottom).offset(15)
+            make.top.equalTo(self.passwordTextField.snp.bottom).offset(10)
             make.trailing.equalToSuperview().inset(20)
         }
     }
     
     func configLoginButton() {
         self.loginButton.snp.makeConstraints { make in
-            make.top.equalTo(self.forgoutPasswordButton.snp.bottom).offset(20)
+            make.top.equalTo(self.forgoutPasswordButton.snp.bottom).offset(15)
             make.leading.equalTo(self.emailTextField.snp.leading)
             make.trailing.equalTo(self.emailTextField.snp.trailing)
             make.height.equalTo(self.emailTextField.snp.height)
@@ -240,7 +240,7 @@ class LoginScreen: UIView {
     
     func configOrLabel() {
         self.orLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.loginButton.snp.bottom).offset(20)
+            make.top.equalTo(self.loginButton.snp.bottom).offset(15)
             make.centerX.equalToSuperview()
             make.height.equalTo(45)
             
@@ -249,8 +249,8 @@ class LoginScreen: UIView {
     
     func configGoogleButton() {
         self.googleButton.snp.makeConstraints { make in
-            make.top.equalTo(self.orLabel.snp.bottom).offset(20)
-            make.leading.equalTo(70)
+            make.top.equalTo(self.orLabel.snp.bottom).offset(15)
+            make.leading.equalTo(75)
             make.height.width.equalTo(67)
         }
     }
@@ -258,14 +258,14 @@ class LoginScreen: UIView {
     func configFacebookButton() {
         self.facebookButton.snp.makeConstraints { make in
             make.top.equalTo(self.orLabel.snp.bottom).offset(20)
-            make.trailing.equalToSuperview().inset(70)
+            make.trailing.equalToSuperview().inset(75)
             make.height.width.equalTo(67)
         }
     }
     
     func configRegisterButton() {
         self.registerButton.snp.makeConstraints { make in
-            make.top.equalTo(self.googleButton.snp.bottom).offset(25)
+            make.top.equalTo(self.googleButton.snp.bottom).offset(20)
             make.leading.equalTo(self.emailTextField.snp.leading)
             make.trailing.equalTo(self.emailTextField.snp.trailing)
             make.height.equalTo(45)

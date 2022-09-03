@@ -103,7 +103,7 @@ class MyFavoritesScreen: UIView {
         self.backgrondOnTop.snp.makeConstraints { make in
             make.top.equalTo(0)
             make.trailing.leading.equalToSuperview()
-            make.height.equalTo(180)
+            make.height.equalTo(150)
         }
     }
     
@@ -111,13 +111,13 @@ class MyFavoritesScreen: UIView {
         self.logoAppImageView.snp.makeConstraints { make in
             make.top.equalTo(self.safeAreaLayoutGuide.snp.top)
             make.trailing.equalToSuperview()
-            make.height.width.equalTo(125)
+            make.height.width.equalTo(100)
         }
     }
     
     func configFavoritesLabel() {
         self.favoritesLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(50)
+            make.top.equalTo(self.backgrondOnTop.snp.bottom).offset(-45)
             make.leading.equalToSuperview().offset(10)
             make.trailing.equalTo(self.logoAppImageView.snp.leading).inset(20)
         }
@@ -127,14 +127,14 @@ class MyFavoritesScreen: UIView {
         self.timesCollectionView.snp.makeConstraints { make in
             make.top.equalTo(self.backgrondOnTop.snp.bottom)
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(110)
+            make.height.equalTo(90)
         }
     }
     
     
     func configChangeFavoritesButton() {
         self.changeFavoritesButton.snp.makeConstraints { make in
-            make.top.equalTo(self.timesCollectionView.snp.bottom).offset(20)
+            make.top.equalTo(self.timesCollectionView.snp.bottom).offset(10)
             make.leading.equalToSuperview().offset(40)
             make.trailing.equalToSuperview().inset(40)
             make.height.equalTo(45)
@@ -143,7 +143,7 @@ class MyFavoritesScreen: UIView {
     
     func configGamesTableView() {
         self.gamesTableView.snp.makeConstraints { make in
-            make.top.equalTo(self.changeFavoritesButton.snp.bottom).offset(20)
+            make.top.equalTo(self.changeFavoritesButton.snp.bottom).offset(10)
             make.leading.trailing.equalToSuperview()
             make.bottom.equalToSuperview().inset(5)
         }

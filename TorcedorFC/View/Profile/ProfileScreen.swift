@@ -144,7 +144,7 @@ class ProfileScreen: UIView {
         self.backgrondOnTop.snp.makeConstraints { make in
             make.top.equalTo(0)
             make.trailing.leading.equalToSuperview()
-            make.height.equalTo(180)
+            make.height.equalTo(150)
         }
     }
     
@@ -152,13 +152,13 @@ class ProfileScreen: UIView {
         self.logoAppImageView.snp.makeConstraints { make in
             make.top.equalTo(self.safeAreaLayoutGuide.snp.top)
             make.trailing.equalToSuperview()
-            make.height.width.equalTo(125)
+            make.height.width.equalTo(100)
         }
     }
     
     func configUserImageView() {
         self.userImageView.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(130)
+            make.top.equalTo(self.backgrondOnTop.snp.bottom).offset(-50)
             make.centerX.equalToSuperview()
             make.height.width.equalTo(100)
         }
@@ -166,7 +166,7 @@ class ProfileScreen: UIView {
     
     func configNameLabel() {
         self.nameLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.userImageView.snp.bottom).offset(30)
+            make.top.equalTo(self.userImageView.snp.bottom).offset(10)
             make.leading.equalToSuperview().offset(30)
             make.trailing.equalToSuperview().inset(30)
             make.height.equalTo(45)
@@ -175,7 +175,7 @@ class ProfileScreen: UIView {
     
     func configEmailLabel() {
         self.emailLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.nameLabel.snp.bottom).offset(30)
+            make.top.equalTo(self.nameLabel.snp.bottom).offset(15)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().inset(20)
             make.height.equalTo(45)
@@ -184,7 +184,7 @@ class ProfileScreen: UIView {
     
     func configFavoriteTimeLabel() {
         self.favoriteTimeLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.emailLabel.snp.bottom).offset(20)
+            make.top.equalTo(self.emailLabel.snp.bottom).offset(10)
             make.leading.equalTo(self.emailLabel.snp.leading)
             make.trailing.equalTo(self.emailLabel.snp.trailing)
             make.height.equalTo(self.emailLabel.snp.height)
@@ -193,7 +193,7 @@ class ProfileScreen: UIView {
     
     func configFavoriteTimeButton() {
         self.favoriteTimeButton.snp.makeConstraints { make in
-            make.top.equalTo(self.favoriteTimeLabel.snp.bottom).offset(20)
+            make.top.equalTo(self.favoriteTimeLabel.snp.bottom).offset(10)
             make.leading.equalToSuperview().offset(80)
             make.trailing.equalToSuperview().inset(80)
             make.height.equalTo(35)
@@ -202,7 +202,7 @@ class ProfileScreen: UIView {
     
     func configResetPasswordButton() {
         self.resetPasswordButton.snp.makeConstraints { make in
-            make.top.equalTo(self.favoriteTimeButton.snp.bottom).offset(20)
+            make.top.equalTo(self.favoriteTimeButton.snp.bottom).offset(10)
             make.leading.equalTo(self.favoriteTimeButton.snp.leading)
             make.trailing.equalTo(self.favoriteTimeButton.snp.trailing)
             make.height.equalTo(self.favoriteTimeButton.snp.height)
@@ -211,7 +211,7 @@ class ProfileScreen: UIView {
     
     func configExitAppButton() {
         self.exitAppButton.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().inset(20)
+            make.bottom.equalToSuperview().inset(30)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().inset(20)
             make.height.equalTo(45)

@@ -36,7 +36,7 @@ class ChampionshipsScreen: UIView {
             make.top.equalToSuperview().offset(10)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().inset(20)
-            make.height.equalTo(190)
+            make.height.equalTo(270)
         }
     }
 }

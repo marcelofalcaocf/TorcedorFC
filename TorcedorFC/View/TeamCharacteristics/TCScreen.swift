@@ -32,7 +32,7 @@ class TCScreen: UIView {
         label.font = UIFont.boldSystemFont(ofSize: 32)
         label.numberOfLines = 0
         label.textAlignment = .center
-        label.text = "Características do Time:"
+        label.text = "Características:"
         return label
     }()
     
@@ -96,7 +96,7 @@ class TCScreen: UIView {
         self.backgrondOnTop.snp.makeConstraints { make in
             make.top.equalTo(0)
             make.trailing.leading.equalToSuperview()
-            make.height.equalTo(180)
+            make.height.equalTo(150)
         }
     }
     
@@ -104,13 +104,13 @@ class TCScreen: UIView {
         self.logoAppImageView.snp.makeConstraints { make in
             make.top.equalTo(self.safeAreaLayoutGuide.snp.top)
             make.trailing.equalToSuperview()
-            make.height.width.equalTo(125)
+            make.height.width.equalTo(100)
         }
     }
     
     func configTCLabel() {
         self.tcLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(50)
+            make.top.equalTo(self.backgrondOnTop.snp.bottom).offset(-45)
             make.leading.equalToSuperview().offset(10)
             make.trailing.equalTo(self.logoAppImageView.snp.leading).inset(20)
         }
@@ -126,7 +126,7 @@ class TCScreen: UIView {
     
     func configTimesTableView() {
         self.timesTableView.snp.makeConstraints { make in
-            make.top.equalTo(self.choiceTextField.snp.bottom).offset(5)
+            make.top.equalTo(self.choiceTextField.snp.bottom)
             make.leading.trailing.equalToSuperview()
             make.bottom.equalToSuperview()
         }

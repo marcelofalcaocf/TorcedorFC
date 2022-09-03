@@ -104,7 +104,7 @@ class GameTableScreen: UIView {
             self.backgrondOnTop.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
             self.backgrondOnTop.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
             self.backgrondOnTop.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
-            self.backgrondOnTop.heightAnchor.constraint(equalToConstant: 180),
+            self.backgrondOnTop.heightAnchor.constraint(equalToConstant: 150),
             
             self.backAppButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 40),
             self.backAppButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
@@ -114,11 +114,11 @@ class GameTableScreen: UIView {
             
             self.logoAppImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
             self.logoAppImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
-            self.logoAppImageView.widthAnchor.constraint(equalToConstant: 125),
-            self.logoAppImageView.heightAnchor.constraint(equalToConstant: 125),
+            self.logoAppImageView.widthAnchor.constraint(equalToConstant: 100),
+            self.logoAppImageView.heightAnchor.constraint(equalToConstant: 100),
             
             
-            self.tableLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 130),
+            self.tableLabel.topAnchor.constraint(equalTo: self.backgrondOnTop.bottomAnchor, constant: -45),
             self.tableLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             self.tableLabel.heightAnchor.constraint(equalToConstant: 45),
             

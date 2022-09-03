@@ -85,7 +85,7 @@ class GamesScreen: UIView {
         self.backgrondOnTop.snp.makeConstraints { make in
             make.top.equalTo(0)
             make.trailing.leading.equalToSuperview()
-            make.height.equalTo(180)
+            make.height.equalTo(150)
         }
     }
     
@@ -93,13 +93,13 @@ class GamesScreen: UIView {
         self.logoAppImageView.snp.makeConstraints { make in
             make.top.equalTo(self.safeAreaLayoutGuide.snp.top)
             make.trailing.equalToSuperview()
-            make.height.width.equalTo(125)
+            make.height.width.equalTo(100)
         }
     }
     
     func configGamesLabel() {
         self.gamesLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(80)
+            make.top.equalTo(self.backgrondOnTop.snp.bottom).offset(-45)
             make.leading.equalToSuperview().offset(10)
             make.height.equalTo(45)
         }
@@ -109,7 +109,7 @@ class GamesScreen: UIView {
         self.daysCollectionView.snp.makeConstraints { make in
             make.top.equalTo(self.backgrondOnTop.snp.bottom)
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(110)
+            make.height.equalTo(90)
         }
     }
     

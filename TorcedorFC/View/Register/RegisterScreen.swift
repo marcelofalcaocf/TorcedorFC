@@ -156,13 +156,13 @@ class RegisterScreen: UIView {
             make.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(30)
             make.leading.equalToSuperview().offset(50)
             make.trailing.equalToSuperview().inset(50)
-            make.height.equalTo(167)
+            make.height.equalTo(130)
         }
     }
     
     func configIntroductionLabel() {
         self.introductionLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.logoAppImageView.snp.bottom).offset(20)
+            make.top.equalTo(self.logoAppImageView.snp.bottom).offset(10)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().inset(20)
         }
@@ -170,7 +170,7 @@ class RegisterScreen: UIView {
     
     func configNameTextField() {
         self.nameTextField.snp.makeConstraints { make in
-            make.top.equalTo(self.introductionLabel.snp.bottom).offset(20)
+            make.top.equalTo(self.introductionLabel.snp.bottom).offset(10)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().inset(20)
             make.height.equalTo(45)
@@ -179,7 +179,7 @@ class RegisterScreen: UIView {
     
     func configEmailTextField() {
         self.emailTextField.snp.makeConstraints { make in
-            make.top.equalTo(self.nameTextField.snp.bottom).offset(20)
+            make.top.equalTo(self.nameTextField.snp.bottom).offset(10)
             make.leading.equalTo(self.nameTextField.snp.leading)
             make.trailing.equalTo(self.nameTextField.snp.trailing)
             make.height.equalTo(45)
@@ -188,7 +188,7 @@ class RegisterScreen: UIView {
     
     func configPasswordTextField() {
         self.passwordTextField.snp.makeConstraints { make in
-            make.top.equalTo(self.emailTextField.snp.bottom).offset(20)
+            make.top.equalTo(self.emailTextField.snp.bottom).offset(10)
             make.leading.equalTo(self.nameTextField.snp.leading)
             make.trailing.equalTo(self.nameTextField.snp.trailing)
             make.height.equalTo(45)
@@ -197,7 +197,7 @@ class RegisterScreen: UIView {
     
     func configConfirmPasswordTextField() {
         self.confirmPasswordTextField.snp.makeConstraints { make in
-            make.top.equalTo(self.passwordTextField.snp.bottom).offset(20)
+            make.top.equalTo(self.passwordTextField.snp.bottom).offset(10)
             make.leading.equalTo(self.nameTextField.snp.leading)
             make.trailing.equalTo(self.nameTextField.snp.trailing)
             make.height.equalTo(45)
@@ -215,7 +215,7 @@ class RegisterScreen: UIView {
     
     func configBackButton() {
         self.backButton.snp.makeConstraints { make in
-            make.top.equalTo(self.registerButton.snp.bottom).offset(40)
+            make.top.equalTo(self.registerButton.snp.bottom).offset(20)
             make.leading.equalTo(self.nameTextField.snp.leading)
             make.trailing.equalTo(self.nameTextField.snp.trailing)
         }

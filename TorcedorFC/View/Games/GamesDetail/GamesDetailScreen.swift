@@ -49,7 +49,7 @@ class GamesDetailScreen: UIView {
         self.backgrondOnTop.snp.makeConstraints { make in
             make.top.equalTo(0)
             make.trailing.leading.equalToSuperview()
-            make.height.equalTo(180)
+            make.height.equalTo(150)
         }
     }
     

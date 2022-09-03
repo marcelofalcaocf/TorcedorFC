@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol ListaDeCampeonatoServiceProtocol: GenericService {
+protocol CampeonatoServiceProtocol: GenericService {
     func getAllListaDeCampeonatos(completion: @escaping completion<[ListaDeCampeonato]?>)
 }
 
-class ListaDeCampeonatoService: ListaDeCampeonatoServiceProtocol {
+class CampeonatoService: CampeonatoServiceProtocol {
     private let baseUrl: String = "https://api.api-futebol.com.br/v1/"
     private let keychain: String = "live_81f4054f57f2d6c1ea0f73996d5d57"
     private let keychainTest: String = "test_2ada5f4c7bb777d3be168a3da854e0"

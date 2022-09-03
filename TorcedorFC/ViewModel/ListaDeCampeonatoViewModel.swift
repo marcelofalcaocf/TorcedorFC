@@ -15,7 +15,7 @@ protocol ListaDeCampeonatoViewModelDelegate: AnyObject {
 class ListaDeCampeonatoViewModel {
     
     private var delegate: ListaDeCampeonatoViewModelDelegate?
-    private let service: ListaDeCampeonatoService = .init()
+    private let service: CampeonatoService = .init()
     var campeonatos: [ListaDeCampeonato] = []
     var filterCampeonatos: [ListaDeCampeonato] = []
     

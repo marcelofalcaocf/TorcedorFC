@@ -13,7 +13,7 @@
 		142D5E4328C039C5002BA5EC /* FaseCopaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D5E4228C039C5002BA5EC /* FaseCopaModel.swift */; };
 		142D5E4628C26890002BA5EC /* GamesDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D5E4528C26890002BA5EC /* GamesDetailScreen.swift */; };
 		142D5E4828C268AF002BA5EC /* GamesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D5E4728C268AF002BA5EC /* GamesDetailViewController.swift */; };
-		142D5E4A28C270D5002BA5EC /* FasesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D5E4928C270D5002BA5EC /* FasesService.swift */; };
+		142D5E4A28C270D5002BA5EC /* FaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D5E4928C270D5002BA5EC /* FaseService.swift */; };
 		142D5E4D28C28244002BA5EC /* DetailChampsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D5E4C28C28244002BA5EC /* DetailChampsTableViewCell.swift */; };
 		142D5E4F28C28265002BA5EC /* DetailChampsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D5E4E28C28265002BA5EC /* DetailChampsScreen.swift */; };
 		14C23D2F28B7C79A00C34A6E /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C23D2E28B7C79A00C34A6E /* LoginScreen.swift */; };
@@ -43,7 +43,7 @@
 		14C5C80528B697CE00300E6D /* TorcedorFCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C5C80428B697CE00300E6D /* TorcedorFCTests.swift */; };
 		14C5C80F28B697CE00300E6D /* TorcedorFCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C5C80E28B697CE00300E6D /* TorcedorFCUITests.swift */; };
 		14C5C81128B697CE00300E6D /* TorcedorFCUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C5C81028B697CE00300E6D /* TorcedorFCUITestsLaunchTests.swift */; };
-		14C5C81F28B698BE00300E6D /* ListaDeCampeonatoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C5C81E28B698BE00300E6D /* ListaDeCampeonatoService.swift */; };
+		14C5C81F28B698BE00300E6D /* CampeonatoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C5C81E28B698BE00300E6D /* CampeonatoService.swift */; };
 		14C5C82228B69A8F00300E6D /* ListaDeCampeonatosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C5C82128B69A8F00300E6D /* ListaDeCampeonatosModel.swift */; };
 		14C5C82428B69E7200300E6D /* GerericService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C5C82328B69E7200300E6D /* GerericService.swift */; };
 		14C5C82728B6A61D00300E6D /* ListaDeCampeonatoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C5C82628B6A61D00300E6D /* ListaDeCampeonatoViewModel.swift */; };
@@ -79,7 +79,7 @@
 		142D5E4228C039C5002BA5EC /* FaseCopaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaseCopaModel.swift; sourceTree = "<group>"; };
 		142D5E4528C26890002BA5EC /* GamesDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesDetailScreen.swift; sourceTree = "<group>"; };
 		142D5E4728C268AF002BA5EC /* GamesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesDetailViewController.swift; sourceTree = "<group>"; };
-		142D5E4928C270D5002BA5EC /* FasesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FasesService.swift; sourceTree = "<group>"; };
+		142D5E4928C270D5002BA5EC /* FaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaseService.swift; sourceTree = "<group>"; };
 		142D5E4C28C28244002BA5EC /* DetailChampsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailChampsTableViewCell.swift; sourceTree = "<group>"; };
 		142D5E4E28C28265002BA5EC /* DetailChampsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailChampsScreen.swift; sourceTree = "<group>"; };
 		14C23D2E28B7C79A00C34A6E /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 		14C5C80A28B697CE00300E6D /* TorcedorFCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TorcedorFCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14C5C80E28B697CE00300E6D /* TorcedorFCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorcedorFCUITests.swift; sourceTree = "<group>"; };
 		14C5C81028B697CE00300E6D /* TorcedorFCUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorcedorFCUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		14C5C81E28B698BE00300E6D /* ListaDeCampeonatoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaDeCampeonatoService.swift; sourceTree = "<group>"; };
+		14C5C81E28B698BE00300E6D /* CampeonatoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampeonatoService.swift; sourceTree = "<group>"; };
 		14C5C82128B69A8F00300E6D /* ListaDeCampeonatosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaDeCampeonatosModel.swift; sourceTree = "<group>"; };
 		14C5C82328B69E7200300E6D /* GerericService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GerericService.swift; sourceTree = "<group>"; };
 		14C5C82628B6A61D00300E6D /* ListaDeCampeonatoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaDeCampeonatoViewModel.swift; sourceTree = "<group>"; };
@@ -354,10 +354,10 @@
 		14C5C81D28B697D500300E6D /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				14C5C81E28B698BE00300E6D /* ListaDeCampeonatoService.swift */,
+				14C5C81E28B698BE00300E6D /* CampeonatoService.swift */,
 				14C5C82828B6AA2600300E6D /* TabelaService.swift */,
+				142D5E4928C270D5002BA5EC /* FaseService.swift */,
 				14C5C82328B69E7200300E6D /* GerericService.swift */,
-				142D5E4928C270D5002BA5EC /* FasesService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -643,7 +643,7 @@
 				14C23D6E28BBD0F000C34A6E /* MyFavoritesScreen.swift in Sources */,
 				14C23D6A28BA7F6C00C34A6E /* GamesScreen.swift in Sources */,
 				14C23D6628B9555900C34A6E /* ChampionshipsTableViewCell.swift in Sources */,
-				14C5C81F28B698BE00300E6D /* ListaDeCampeonatoService.swift in Sources */,
+				14C5C81F28B698BE00300E6D /* CampeonatoService.swift in Sources */,
 				14C23D5B28B9336400C34A6E /* TCViewController.swift in Sources */,
 				14C5C7ED28B697CC00300E6D /* SceneDelegate.swift in Sources */,
 				14C23D5028B85A4800C34A6E /* ForgotPasswordScreen.swift in Sources */,
@@ -658,7 +658,7 @@
 				14C23D3728B83BD300C34A6E /* RegisterScreen.swift in Sources */,
 				14C23D6828B9578B00C34A6E /* ChampionshipsScreen.swift in Sources */,
 				14C23D4E28B85A2300C34A6E /* ForgotPasswordViewController.swift in Sources */,
-				142D5E4A28C270D5002BA5EC /* FasesService.swift in Sources */,
+				142D5E4A28C270D5002BA5EC /* FaseService.swift in Sources */,
 				14C23D3528B83BB900C34A6E /* RegisterViewController.swift in Sources */,
 				14C5C82228B69A8F00300E6D /* ListaDeCampeonatosModel.swift in Sources */,
 				14C23D3228B823DF00C34A6E /* HomeViewController.swift in Sources */,

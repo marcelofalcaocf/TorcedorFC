@@ -99,7 +99,7 @@ class HomeScreen: UIView {
         self.backgrondOnTop.snp.makeConstraints { make in
             make.top.equalTo(0)
             make.trailing.leading.equalToSuperview()
-            make.height.equalTo(180)
+            make.height.equalTo(150)
         }
     }
     
@@ -115,13 +115,13 @@ class HomeScreen: UIView {
         self.logoAppImageView.snp.makeConstraints { make in
             make.top.equalTo(self.safeAreaLayoutGuide.snp.top)
             make.trailing.equalToSuperview()
-            make.height.width.equalTo(125)
+            make.height.width.equalTo(100)
         }
     }
     
     func configCampLabel() {
         self.campLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.welcomeNameLabel.snp.bottom).offset(20)
+            make.top.equalTo(self.backgrondOnTop.snp.bottom).offset(-45)
             make.leading.equalToSuperview().offset(10)
         }
     }
