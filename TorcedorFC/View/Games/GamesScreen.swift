@@ -50,6 +50,7 @@ class GamesScreen: UIView {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = UIColor(red: 91/255, green: 172/255, blue: 160/255, alpha: 1.0)
         tableView.layer.cornerRadius = 10
+        tableView.register(GamesTableViewCell.self, forCellReuseIdentifier: GamesTableViewCell.identifier)
         return tableView
     }()
     
@@ -67,6 +68,11 @@ class GamesScreen: UIView {
     
     func configBackGround() {
         self.backgroundColor = UIColor(red: 32/255, green: 43/255, blue: 59/255, alpha: 1.0)
+    }
+    
+    public func configTableViewProtocols(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
+        self.gamesTableView.delegate = delegate
+        self.gamesTableView.dataSource = dataSource
     }
     
     func configSuperView() {
