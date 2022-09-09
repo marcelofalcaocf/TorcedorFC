@@ -41,10 +41,18 @@ extension HomeViewController: ListaDeCampeonatoViewModelDelegate {
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let vc: GameTableViewController = GameTableViewController()
-        vc.campeonatoId = viewModel.getCampeonatoId(indexPath: indexPath.row)
+       let vc = viewModel.screenPass(indexPath: indexPath.row)
         navigationController?.pushViewController(vc, animated: true)
+        
+//        if indexPath.row == 0 {
+//            let vc: GameTableViewController = GameTableViewController()
+//            vc.campeonatoId = viewModel.getCampeonatoId(indexPath: indexPath.row)
+//            navigationController?.pushViewController(vc, animated: true)
+//        } else {
+//            let vc: CupDetailViewController = CupDetailViewController()
+//            vc.campeonatoId = viewModel.getCampeonatoId(indexPath: indexPath.row)
+//            navigationController?.pushViewController(vc, animated: true)
+//        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

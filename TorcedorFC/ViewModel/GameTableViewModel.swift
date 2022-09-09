@@ -49,6 +49,5 @@ class GameTableViewModel {
         default:
             break
         }
-        
     }
 }

@@ -1,21 +1,21 @@
 //
-//  GameTableScreen.swift
+//  CupDetailScreen.swift
 //  TorcedorFC
 //
-//  Created by Marcelo Falcao Costa Filho on 31/08/22.
+//  Created by Marcelo Falcao Costa Filho on 08/09/22.
 //
 
 import UIKit
 
-protocol GameTableScreenProtocol: AnyObject {
+protocol CupDetailScreenProtocol: AnyObject {
     func actionBackButton()
 }
 
-class GameTableScreen: UIView {
+class CupDetailScreen: UIView {
 
-    private weak var delegate: GameTableScreenProtocol?
+    private weak var delegate: CupDetailScreenProtocol?
     
-    func delegate(delegate: GameTableScreenProtocol?) {
+    func delegate(delegate: CupDetailScreenProtocol?) {
         self.delegate = delegate
     }
     
@@ -42,21 +42,12 @@ class GameTableScreen: UIView {
         return image
     }()
     
-    lazy var tableLabel: UILabel = {
+    lazy var cupLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = UIColor(red: 32/255, green: 43/255, blue: 59/255, alpha: 1.0)
         label.font = UIFont.boldSystemFont(ofSize: 32)
-        label.text = "Tabela:"
-        return label
-    }()
-    
-    lazy var seasonLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .gray
-        label.font = UIFont.boldSystemFont(ofSize: 20)
-        label.text = "Temporada 2022:"
+        label.text = "Copa:"
         return label
     }()
     
@@ -84,15 +75,9 @@ class GameTableScreen: UIView {
         self.addSubview(self.backgrondOnTop)
         self.backgrondOnTop.addSubview(self.backAppButton)
         self.backgrondOnTop.addSubview(self.logoAppImageView)
-        self.backgrondOnTop.addSubview(self.tableLabel)
-        self.addSubview(self.seasonLabel)
+        self.backgrondOnTop.addSubview(self.cupLabel)
         self.addSubview(self.gamesTableView)
         
-    }
-    
-    public func configTableViewProtocols(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
-        self.gamesTableView.delegate = delegate
-        self.gamesTableView.dataSource = dataSource
     }
     
     @objc private func tappeBackButton() {
@@ -123,17 +108,13 @@ class GameTableScreen: UIView {
             self.logoAppImageView.heightAnchor.constraint(equalToConstant: 100),
             
             
-            self.tableLabel.topAnchor.constraint(equalTo: self.backgrondOnTop.bottomAnchor, constant: -45),
-            self.tableLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-            self.tableLabel.heightAnchor.constraint(equalToConstant: 45),
+            self.cupLabel.topAnchor.constraint(equalTo: self.backgrondOnTop.bottomAnchor, constant: -45),
+            self.cupLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
+            self.cupLabel.heightAnchor.constraint(equalToConstant: 45),
+
             
             
-            self.seasonLabel.topAnchor.constraint(equalTo: self.backgrondOnTop.bottomAnchor, constant: 10),
-            self.seasonLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-            self.seasonLabel.heightAnchor.constraint(equalToConstant: 30),
-            
-            
-            self.gamesTableView.topAnchor.constraint(equalTo: self.seasonLabel.bottomAnchor, constant: 5),
+            self.gamesTableView.topAnchor.constraint(equalTo: self.backgrondOnTop.bottomAnchor, constant: 5),
             self.gamesTableView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             self.gamesTableView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             self.gamesTableView.bottomAnchor.constraint(equalTo: self.bottomAnchor)

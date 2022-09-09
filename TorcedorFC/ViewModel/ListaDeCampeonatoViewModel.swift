@@ -5,7 +5,7 @@
 //  Created by Marcelo Falcao Costa Filho on 24/08/22.
 //
 
-import Foundation
+import UIKit
 
 protocol ListaDeCampeonatoViewModelDelegate: AnyObject {
     func success()
@@ -41,12 +41,23 @@ class ListaDeCampeonatoViewModel {
     
     func getCampeonatoId(indexPath: Int) -> Int {
         switch indexPath {
-            
         case 0:
             return 10
-        
+            
         default:
             return 2
+        }
+    }
+    
+    func screenPass(indexPath: Int) -> UIViewController {
+        if indexPath == 0 {
+            let vc: GameTableViewController = GameTableViewController()
+            vc.campeonatoId = getCampeonatoId(indexPath: indexPath)
+            return vc
+        } else {
+            let vc: CupDetailViewController = CupDetailViewController()
+            vc.campeonatoId = getCampeonatoId(indexPath: indexPath)
+            return vc
         }
     }
 }

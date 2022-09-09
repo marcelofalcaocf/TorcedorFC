@@ -25,6 +25,13 @@ class GamesDetailViewController: UIViewController {
 
 extension GamesDetailViewController: GameDetailScreenProtocol {
     func actionBackButton() {
+        if gamesDetailScreen.segmentedControl.selectedSegmentIndex == 0 {
+            print("bola")
+        } else {
+            print("chuteira")
+        }
+        
         navigationController?.popViewController(animated: false)
     }
 }
+ 

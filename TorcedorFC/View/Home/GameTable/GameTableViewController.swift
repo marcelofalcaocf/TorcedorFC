@@ -21,6 +21,8 @@ class GameTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         gameTableScreen.delegate(delegate: self)
+        gameTableScreen.configTableViewProtocols(delegate: self, dataSource: self)
+        
         viewModel.tabelaDelegate(delegate: self)
         viewModel.getTabela(id: campeonatoId)
     }
@@ -43,6 +45,23 @@ extension GameTableViewController: GameTableViewModelDelegate {
         DispatchQueue.main.async {
             print("Deu errado")
         }
+    }
+}
+
+extension GameTableViewController: UITableViewDelegate {
+    
+}
+
+extension GameTableViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: DetailChampsTableViewCell.identifier, for: indexPath) as? DetailChampsTableViewCell {
+            return cell
+        }
+        return UITableViewCell()
     }
     
     
