@@ -56,7 +56,7 @@ class CupDetailScreen: UIView {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = .darkGray
         tableView.layer.cornerRadius = 10
-        tableView.register(DetailChampsTableViewCell.self, forCellReuseIdentifier: DetailChampsTableViewCell.identifier)
+        tableView.register(CupPhasesTableViewCell.self, forCellReuseIdentifier: CupPhasesTableViewCell.identifier)
         return tableView
     }()
     
@@ -78,6 +78,11 @@ class CupDetailScreen: UIView {
         self.backgrondOnTop.addSubview(self.cupLabel)
         self.addSubview(self.gamesTableView)
         
+    }
+    
+    public func configTableViewProtocols(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
+        self.gamesTableView.delegate = delegate
+        self.gamesTableView.dataSource = dataSource
     }
     
     @objc private func tappeBackButton() {

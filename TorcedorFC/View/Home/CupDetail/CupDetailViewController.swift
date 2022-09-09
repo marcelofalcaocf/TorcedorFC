@@ -20,7 +20,7 @@ class CupDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        gameTableScreen.configTableViewProtocols(delegate: self, dataSource: self)
         gameTableScreen.delegate(delegate: self)
         viewModel.getTabela(id: campeonatoId)
     }
@@ -30,4 +30,23 @@ extension CupDetailViewController: CupDetailScreenProtocol {
     func actionBackButton() {
         navigationController?.popViewController(animated: false)
     }    
+}
+
+extension CupDetailViewController: UITableViewDelegate {
+    
+}
+
+extension CupDetailViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 7
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: CupPhasesTableViewCell.identifier, for: indexPath) as? CupPhasesTableViewCell {
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    
 }

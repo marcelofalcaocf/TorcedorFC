@@ -83,30 +83,93 @@ class DetailChampsScreen: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.configSuperView()
-        self.configBackGround()
+        configSuperView()
+        configBackGround()
         
-        self.configPositionLabel()
+        configPositionLabel()
+        configTeamImageView()
+        configTeamLabel()
+        configDefeatsLabel()
+        configDrawsLabel()
+        configVictoriesLabel()
+        configNumberOfGamesLabel()
+        configSpotsLabel()
     }
     
-    func configBackGround() {
+    private func configBackGround() {
         self.backgroundColor = UIColor(red: 32/255, green: 43/255, blue: 59/255, alpha: 1.0)
     }
     
-    func configSuperView() {
-        self.addSubview(self.positionLabel)
+    private func configSuperView() {
+        addSubview(positionLabel)
+        addSubview(teamImageView)
+        addSubview(teamLabel)
+        addSubview(defeatsLabel)
+        addSubview(drawsLabel)
+        addSubview(victoriesLabel)
+        addSubview(numberOfGamesLabel)
+        addSubview(spotsLabel)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configPositionLabel() {
+    private func configPositionLabel() {
         positionLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(2)
-            make.leading.equalToSuperview().inset(5)
+            make.top.equalToSuperview().offset(7)
+            make.leading.equalToSuperview().offset(5)
         }
     }
     
+    private func configTeamImageView() {
+        teamImageView.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(5)
+            make.leading.equalTo(self.positionLabel.snp.trailing).offset(5)
+            make.height.width.equalTo(22)
+        }
+    }
+    
+    private func configTeamLabel() {
+        teamLabel.snp.makeConstraints { make in
+            make.top.equalTo(self.positionLabel.snp.top)
+            make.leading.equalTo(self.teamImageView.snp.trailing).offset(10)
+        }
+    }
+    
+    private func configDefeatsLabel() {
+        defeatsLabel.snp.makeConstraints { make in
+            make.top.equalTo(self.positionLabel.snp.top)
+            make.trailing.equalToSuperview().inset(10)
+        }
+    }
+    
+    private func configDrawsLabel() {
+        drawsLabel.snp.makeConstraints { make in
+            make.top.equalTo(self.positionLabel.snp.top)
+            make.trailing.equalTo(self.defeatsLabel.snp.trailing).inset(30)
+        }
+    }
+
+    private func configVictoriesLabel() {
+        victoriesLabel.snp.makeConstraints { make in
+            make.top.equalTo(self.positionLabel.snp.top)
+            make.trailing.equalTo(self.drawsLabel.snp.trailing).inset(30)
+        }
+    }
+
+    private func configNumberOfGamesLabel() {
+        numberOfGamesLabel.snp.makeConstraints { make in
+            make.top.equalTo(self.positionLabel.snp.top)
+            make.trailing.equalTo(self.victoriesLabel.snp.trailing).inset(30)
+        }
+    }
+
+    private func configSpotsLabel() {
+        spotsLabel.snp.makeConstraints { make in
+            make.top.equalTo(self.positionLabel.snp.top)
+            make.trailing.equalTo(self.numberOfGamesLabel.snp.trailing).inset(30)
+        }
+    }
 }
 
