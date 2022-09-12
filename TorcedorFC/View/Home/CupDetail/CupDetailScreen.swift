@@ -56,6 +56,7 @@ class CupDetailScreen: UIView {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = .darkGray
         tableView.layer.cornerRadius = 10
+        tableView.backgroundColor = UIColor(red: 32/255, green: 43/255, blue: 59/255, alpha: 1.0)
         tableView.register(CupPhasesTableViewCell.self, forCellReuseIdentifier: CupPhasesTableViewCell.identifier)
         return tableView
     }()
@@ -68,7 +69,7 @@ class CupDetailScreen: UIView {
     }
     
     func configBackGround() {
-        self.backgroundColor = UIColor(red: 32/255, green: 43/255, blue: 59/255, alpha: 1.0)
+        self.backgroundColor = UIColor(red: 40/255, green: 57/255, blue: 81/255, alpha: 1.0)
     }
     
     private func configSuperView() {

@@ -33,7 +33,9 @@ extension CupDetailViewController: CupDetailScreenProtocol {
 }
 
 extension CupDetailViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90
+    }
 }
 
 extension CupDetailViewController: UITableViewDataSource {

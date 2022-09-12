@@ -97,7 +97,7 @@ class GamesDetailScreen: UIView {
         return control
     }()
     
-    lazy var gamesTableView: UITableView = {
+    lazy var statisticTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = .gray
@@ -137,7 +137,7 @@ class GamesDetailScreen: UIView {
         self.backgrondOnTop.addSubview(visitingTeamLabel)
         self.backgrondOnTop.addSubview(scoreboardLabel)
         self.addSubview(segmentedControl)
-        self.addSubview(gamesTableView)
+        self.addSubview(statisticTableView)
 
     }
     
@@ -231,7 +231,7 @@ class GamesDetailScreen: UIView {
     }
     
     private func configGamesTableView() {
-        self.gamesTableView.snp.makeConstraints { make in
+        self.statisticTableView.snp.makeConstraints { make in
             make.top.equalTo(self.segmentedControl.snp.bottom).offset(10)
             make.trailing.leading.equalToSuperview()
             make.bottom.equalToSuperview()

@@ -13,7 +13,8 @@ class CupPhasesScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.font = UIFont.boldSystemFont(ofSize: 22)
+        label.textAlignment = .center
+        label.font = UIFont.boldSystemFont(ofSize: 28)
         label.text = "Fase"
         return label
     }()
@@ -27,7 +28,8 @@ class CupPhasesScreen: UIView {
     }
     
     private func configBackGround() {
-        self.backgroundColor = UIColor(red: 32/255, green: 43/255, blue: 59/255, alpha: 1.0)
+        backgroundColor = UIColor(red: 91/255, green: 172/255, blue: 160/255, alpha: 1.0)
+       // self.backgroundColor = UIColor(red: 40/255, green: 57/255, blue: 81/255, alpha: 1.0)
     }
     
     private func configSuperView() {
