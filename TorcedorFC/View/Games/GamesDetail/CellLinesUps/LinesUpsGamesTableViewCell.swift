@@ -1,18 +1,18 @@
 //
-//  StatisticGameTableViewCell.swift
+//  LinesUpsGamesTableViewCell.swift
 //  TorcedorFC
 //
-//  Created by Marcelo Falcao Costa Filho on 12/09/22.
+//  Created by Marcelo Falcao Costa Filho on 13/09/22.
 //
 
 import UIKit
 
-class StatisticGameTableViewCell: UITableViewCell {
+class LinesUpsGamesTableViewCell: UITableViewCell {
+
+    static let identifier: String = "LinesUpsGamesTableViewCell"
     
-    static let identifier: String = "StatisticGameTableViewCell"
-    
-    lazy var detailStatisticView: StatisticsGameScreen = {
-        let view = StatisticsGameScreen()
+    lazy var detailStatisticView: LinesUpsGameScreen = {
+        let view = LinesUpsGameScreen()
         return view
     }()
 

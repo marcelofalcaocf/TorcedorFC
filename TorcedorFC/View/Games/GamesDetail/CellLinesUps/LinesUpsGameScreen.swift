@@ -1,20 +1,20 @@
 //
-//  StatisticsGameScreen.swift
+//  LinesUpsGameScreen.swift
 //  TorcedorFC
 //
-//  Created by Marcelo Falcao Costa Filho on 12/09/22.
+//  Created by Marcelo Falcao Costa Filho on 13/09/22.
 //
 
 import UIKit
 
-class StatisticsGameScreen: UIView {
+class LinesUpsGameScreen: UIView {
     
     lazy var detailLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
         label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.text = "Detalhe"
+        label.text = "Detail"
         return label
     }()
     

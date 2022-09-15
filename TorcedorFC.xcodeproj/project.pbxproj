@@ -57,6 +57,8 @@
 		14ED799928CBA69400B48DEA /* CupPhasesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ED799828CBA69400B48DEA /* CupPhasesScreen.swift */; };
 		14ED799D28CFD8E500B48DEA /* StatisticsGameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ED799C28CFD8E500B48DEA /* StatisticsGameScreen.swift */; };
 		14ED799F28CFD8FF00B48DEA /* StatisticGameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ED799E28CFD8FF00B48DEA /* StatisticGameTableViewCell.swift */; };
+		14ED79A128D0D2EB00B48DEA /* LinesUpsGameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ED79A028D0D2EB00B48DEA /* LinesUpsGameScreen.swift */; };
+		14ED79A328D0D30700B48DEA /* LinesUpsGamesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ED79A228D0D30700B48DEA /* LinesUpsGamesTableViewCell.swift */; };
 		16BAC42337476A22179BA314 /* Pods_TorcedorFC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B20A53155E3935FB825A21F /* Pods_TorcedorFC.framework */; };
 		49766258DE757AFA377E40EE /* libPods-TorcedorFCTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B1F34F58633E020653DCDF /* libPods-TorcedorFCTests.a */; };
 		9B1BC542F6087ED444E1BF44 /* libPods-TorcedorFCUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB66E060E82687828CC7B8A /* libPods-TorcedorFCUITests.a */; };
@@ -135,6 +137,8 @@
 		14ED799828CBA69400B48DEA /* CupPhasesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupPhasesScreen.swift; sourceTree = "<group>"; };
 		14ED799C28CFD8E500B48DEA /* StatisticsGameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsGameScreen.swift; sourceTree = "<group>"; };
 		14ED799E28CFD8FF00B48DEA /* StatisticGameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticGameTableViewCell.swift; sourceTree = "<group>"; };
+		14ED79A028D0D2EB00B48DEA /* LinesUpsGameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesUpsGameScreen.swift; sourceTree = "<group>"; };
+		14ED79A228D0D30700B48DEA /* LinesUpsGamesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesUpsGamesTableViewCell.swift; sourceTree = "<group>"; };
 		2B20A53155E3935FB825A21F /* Pods_TorcedorFC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TorcedorFC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EB66E060E82687828CC7B8A /* libPods-TorcedorFCUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TorcedorFCUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50A0D974945CC213592E9370 /* Pods-TorcedorFC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TorcedorFC.debug.xcconfig"; path = "Target Support Files/Pods-TorcedorFC/Pods-TorcedorFC.debug.xcconfig"; sourceTree = "<group>"; };
@@ -441,6 +445,8 @@
 		14ED799B28CFA1DB00B48DEA /* CellLinesUps */ = {
 			isa = PBXGroup;
 			children = (
+				14ED79A028D0D2EB00B48DEA /* LinesUpsGameScreen.swift */,
+				14ED79A228D0D30700B48DEA /* LinesUpsGamesTableViewCell.swift */,
 			);
 			path = CellLinesUps;
 			sourceTree = "<group>";
@@ -690,6 +696,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14ED79A128D0D2EB00B48DEA /* LinesUpsGameScreen.swift in Sources */,
 				14C5C82728B6A61D00300E6D /* ListaDeCampeonatoViewModel.swift in Sources */,
 				142D5E3D28C00452002BA5EC /* GameTableViewController.swift in Sources */,
 				14C5C7EF28B697CC00300E6D /* LoginViewController.swift in Sources */,
@@ -713,6 +720,7 @@
 				14C23D5B28B9336400C34A6E /* TCViewController.swift in Sources */,
 				14ED799228CADE8E00B48DEA /* CupDetailScreen.swift in Sources */,
 				14C5C7ED28B697CC00300E6D /* SceneDelegate.swift in Sources */,
+				14ED79A328D0D30700B48DEA /* LinesUpsGamesTableViewCell.swift in Sources */,
 				14C23D5028B85A4800C34A6E /* ForgotPasswordScreen.swift in Sources */,
 				142D5E4628C26890002BA5EC /* GamesDetailScreen.swift in Sources */,
 				142D5E4328C039C5002BA5EC /* FaseCopaModel.swift in Sources */,

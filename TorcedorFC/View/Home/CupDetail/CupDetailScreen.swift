@@ -119,7 +119,6 @@ class CupDetailScreen: UIView {
             self.cupLabel.heightAnchor.constraint(equalToConstant: 45),
 
             
-            
             self.gamesTableView.topAnchor.constraint(equalTo: self.backgrondOnTop.bottomAnchor, constant: 5),
             self.gamesTableView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             self.gamesTableView.trailingAnchor.constraint(equalTo: self.trailingAnchor),

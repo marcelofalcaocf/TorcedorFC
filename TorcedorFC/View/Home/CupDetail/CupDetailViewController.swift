@@ -49,6 +49,4 @@ extension CupDetailViewController: UITableViewDataSource {
         }
         return UITableViewCell()
     }
-    
-    
 }

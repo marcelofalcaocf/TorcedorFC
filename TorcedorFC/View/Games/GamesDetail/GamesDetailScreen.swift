@@ -9,6 +9,7 @@ import UIKit
 
 protocol GameDetailScreenProtocol: AnyObject {
     func actionBackButton()
+    func chooseTableView()
 }
 
 class GamesDetailScreen: UIView {
@@ -92,8 +93,9 @@ class GamesDetailScreen: UIView {
     
     lazy var segmentedControl: UISegmentedControl = {
         let control = UISegmentedControl(items: items)
-        control.selectedSegmentIndex = 0
+        control.selectedSegmentIndex = 1
         control.layer.cornerRadius = 9
+        control.addTarget(self, action: #selector(self.chooseTableView), for: .valueChanged)
         return control
     }()
     
@@ -102,6 +104,8 @@ class GamesDetailScreen: UIView {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = .gray
         tableView.layer.cornerRadius = 10
+        tableView.register(StatisticGameTableViewCell.self, forCellReuseIdentifier: StatisticGameTableViewCell.identifier)
+        tableView.register(LinesUpsGamesTableViewCell.self, forCellReuseIdentifier: LinesUpsGamesTableViewCell.identifier)
         return tableView
     }()
     
@@ -120,7 +124,6 @@ class GamesDetailScreen: UIView {
         self.configScoreboardLabel()
         self.configSegmentedControl()
         self.configGamesTableView()
-
     }
     
     func configBackGround() {
@@ -141,14 +144,13 @@ class GamesDetailScreen: UIView {
 
     }
     
-//    @objc private func handleSegmentedControlValueChanged(_ sender: UISegmentedControl) {
-//        switch sender.selectedSegmentIndex {
-//        case 0:
-//            view?.backgroundColor = .gray
-//        default:
-//            view?.backgroundColor = .red
-//        }
-//    }
+    public func configTableViewProtocols(dataSource: UITableViewDataSource) {
+        self.statisticTableView.dataSource = dataSource
+    }
+    
+    @objc private func chooseTableView() {
+        self.delegate?.chooseTableView()
+    }
     
     @objc private func tappeBackButton() {
         self.delegate?.actionBackButton()
