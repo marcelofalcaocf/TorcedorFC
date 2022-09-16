@@ -108,7 +108,7 @@ class CupDetailScreen: UIView {
             self.backAppButton.widthAnchor.constraint(equalToConstant: 20),
             
             
-            self.logoAppImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
+            self.logoAppImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 30),
             self.logoAppImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
             self.logoAppImageView.widthAnchor.constraint(equalToConstant: 100),
             self.logoAppImageView.heightAnchor.constraint(equalToConstant: 100),

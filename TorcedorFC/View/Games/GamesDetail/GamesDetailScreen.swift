@@ -93,7 +93,7 @@ class GamesDetailScreen: UIView {
     
     lazy var segmentedControl: UISegmentedControl = {
         let control = UISegmentedControl(items: items)
-        control.selectedSegmentIndex = 1
+        control.selectedSegmentIndex = 0
         control.layer.cornerRadius = 9
         control.addTarget(self, action: #selector(self.chooseTableView), for: .valueChanged)
         return control
@@ -104,6 +104,7 @@ class GamesDetailScreen: UIView {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = .gray
         tableView.layer.cornerRadius = 10
+        tableView.backgroundColor = UIColor(red: 32/255, green: 43/255, blue: 59/255, alpha: 1.0)
         tableView.register(StatisticGameTableViewCell.self, forCellReuseIdentifier: StatisticGameTableViewCell.identifier)
         tableView.register(LinesUpsGamesTableViewCell.self, forCellReuseIdentifier: LinesUpsGamesTableViewCell.identifier)
         return tableView
@@ -144,8 +145,9 @@ class GamesDetailScreen: UIView {
 
     }
     
-    public func configTableViewProtocols(dataSource: UITableViewDataSource) {
+    public func configTableViewProtocols(dataSource: UITableViewDataSource, delegate: UITableViewDelegate) {
         self.statisticTableView.dataSource = dataSource
+        self.statisticTableView.delegate = delegate
     }
     
     @objc private func chooseTableView() {

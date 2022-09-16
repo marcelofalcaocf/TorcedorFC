@@ -7,11 +7,6 @@
 
 import UIKit
 
-enum TableViewType {
-    case estatistica
-    case escalacoes
-}
-
 class GamesDetailViewController: UIViewController {
     
     
@@ -25,7 +20,7 @@ class GamesDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         gamesDetailScreen.delegate(delegate: self)
-        gamesDetailScreen.configTableViewProtocols(dataSource: self)
+        gamesDetailScreen.configTableViewProtocols(dataSource: self, delegate: self)
     }
 }
 
@@ -44,12 +39,22 @@ extension GamesDetailViewController: GameDetailScreenProtocol {
     }
 }
 
+extension GamesDetailViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if gamesDetailScreen.segmentedControl.selectedSegmentIndex == 1 {
+            return 400
+        } else {
+            return 40
+        }
+    }
+}
+
 extension GamesDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if gamesDetailScreen.segmentedControl.selectedSegmentIndex == 0 {
-            return 5
+            return 11
         } else {
-            return 3
+            return 2
         }
     }
     

@@ -144,7 +144,7 @@ class ProfileScreen: UIView {
         self.backgrondOnTop.snp.makeConstraints { make in
             make.top.equalTo(0)
             make.trailing.leading.equalToSuperview()
-            make.height.equalTo(150)
+            make.height.equalTo(160)
         }
     }
     

@@ -9,30 +9,66 @@ import UIKit
 
 class LinesUpsGameScreen: UIView {
     
-    lazy var detailLabel: UILabel = {
+    lazy var teamImageView: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.backgroundColor = .gray
+        image.layer.cornerRadius = 11
+        image.contentMode = .scaleAspectFit
+        return image
+    }()
+    
+    lazy var teamlLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
         label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.text = "Detail"
+        label.text = "Flamengo"
         return label
     }()
     
-    lazy var homeLabel: UILabel = {
+    lazy var schemelLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
         label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.text = "Time A"
+        label.text = "4-4-2"
         return label
     }()
     
-    lazy var visitingLabel: UILabel = {
+    lazy var tacticalSchemeImageView: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage(named: "esquema442")
+        image.contentMode = .scaleAspectFit
+        return image
+    }()
+    
+    lazy var holdersLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
         label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.text = "Time B"
+        label.text = "Titulares:"
+        return label
+    }()
+    
+    lazy var coachLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
+        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.text = "Treinador: Rogerio Ceni"
+        return label
+    }()
+    
+    lazy var linesUpLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
+        label.numberOfLines = 0
+        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.text = "Santos, Matheuzinho, Fabricio Bruno, Pablo e Ayrton Lucas, Diego, Vidal e Victor Hugo, Everton Cebolinha, Marinho, Lázaro"
         return label
     }()
 
@@ -41,7 +77,13 @@ class LinesUpsGameScreen: UIView {
         configBackGround()
         configSuperView()
         
-        configDetailLabel()
+        configTeamImageView()
+        configTeamlLabel()
+        configSchemelLabel()
+        configTacticalSchemeImageView()
+        configHoldersLabel()
+        configCoachLabel()
+        configLinesUpLabel()
     }
     
     private func configBackGround() {
@@ -49,17 +91,69 @@ class LinesUpsGameScreen: UIView {
     }
     
     private func configSuperView() {
-        addSubview(detailLabel)
+        addSubview(teamImageView)
+        addSubview(teamlLabel)
+        addSubview(schemelLabel)
+        addSubview(tacticalSchemeImageView)
+        addSubview(holdersLabel)
+        addSubview(coachLabel)
+        addSubview(linesUpLabel)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func configDetailLabel() {
-        detailLabel.snp.makeConstraints { make in
+    private func configTeamImageView() {
+        teamImageView.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(2)
-            make.centerX.equalToSuperview()
+            make.leading.equalToSuperview().offset(2)
+            make.height.width.equalTo(22)
+           // make.centerX.equalToSuperview()
+        }
+    }
+    
+    private func configTeamlLabel() {
+        teamlLabel.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(4)
+            make.leading.equalTo(self.teamImageView.snp.trailing).offset(5)
+        }
+    }
+    
+    private func configSchemelLabel() {
+        schemelLabel.snp.makeConstraints { make in
+            make.top.equalTo(self.teamlLabel.snp.top)
+            make.trailing.equalToSuperview().inset(2)
+        }
+    }
+    
+    private func configTacticalSchemeImageView() {
+        tacticalSchemeImageView.snp.makeConstraints { make in
+            make.top.equalTo(self.teamlLabel.snp.bottom).offset(10)
+            make.width.equalToSuperview()
+            make.height.equalTo(240)
+        }
+    }
+    
+    private func configHoldersLabel() {
+        holdersLabel.snp.makeConstraints { make in
+            make.top.equalTo(self.tacticalSchemeImageView.snp.bottom).offset(10)
+            make.leading.equalToSuperview().offset(2)
+        }
+    }
+    
+    private func configCoachLabel() {
+        coachLabel.snp.makeConstraints { make in
+            make.top.equalTo(self.holdersLabel.snp.top)
+            make.trailing.equalToSuperview().inset(2)
+        }
+    }
+    
+    private func configLinesUpLabel() {
+        linesUpLabel.snp.makeConstraints { make in
+            make.top.equalTo(self.holdersLabel.snp.bottom).offset(5)
+            make.leading.equalToSuperview().offset(2)
+            make.trailing.equalToSuperview().inset(2)
         }
     }
 }

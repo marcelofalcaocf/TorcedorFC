@@ -39,6 +39,7 @@ class GamesScreen: UIView {
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.backgroundColor = .gray
         collectionView.delaysContentTouches = false
+        collectionView.register(GameDaysCollectionViewCell.self, forCellWithReuseIdentifier: GameDaysCollectionViewCell.identifier)
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
         layout.scrollDirection = .horizontal
         collectionView.setCollectionViewLayout(layout, animated: false)
@@ -73,6 +74,11 @@ class GamesScreen: UIView {
     public func configTableViewProtocols(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
         self.gamesTableView.delegate = delegate
         self.gamesTableView.dataSource = dataSource
+    }
+    
+    public func configCollectionViewProtocols(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource) {
+        self.daysCollectionView.delegate = delegate
+        self.daysCollectionView.dataSource = dataSource
     }
     
     func configSuperView() {

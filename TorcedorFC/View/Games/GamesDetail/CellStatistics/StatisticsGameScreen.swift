@@ -22,7 +22,7 @@ class StatisticsGameScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.font = UIFont.boldSystemFont(ofSize: 16)
         label.text = "Time A"
         return label
     }()
@@ -31,7 +31,7 @@ class StatisticsGameScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.font = UIFont.boldSystemFont(ofSize: 16)
         label.text = "Time B"
         return label
     }()
@@ -42,6 +42,8 @@ class StatisticsGameScreen: UIView {
         configSuperView()
         
         configDetailLabel()
+        configHomeLabel()
+        configVisitingLabel()
     }
     
     private func configBackGround() {
@@ -50,6 +52,8 @@ class StatisticsGameScreen: UIView {
     
     private func configSuperView() {
         addSubview(detailLabel)
+        addSubview(homeLabel)
+        addSubview(visitingLabel)
     }
     
     required init?(coder: NSCoder) {
@@ -58,8 +62,24 @@ class StatisticsGameScreen: UIView {
     
     private func configDetailLabel() {
         detailLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(2)
+            make.top.equalToSuperview().offset(5)
             make.centerX.equalToSuperview()
         }
     }
+    
+    private func configHomeLabel() {
+        homeLabel.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(5)
+            make.leading.equalToSuperview().offset(5)
+        }
+    }
+    
+    private func configVisitingLabel() {
+        visitingLabel.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(5)
+            make.trailing.equalToSuperview().inset(5)
+            
+        }
+    }
+    
 }

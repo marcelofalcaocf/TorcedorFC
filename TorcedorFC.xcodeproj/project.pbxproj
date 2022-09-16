@@ -18,6 +18,8 @@
 		142D5E4F28C28265002BA5EC /* DetailChampsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D5E4E28C28265002BA5EC /* DetailChampsScreen.swift */; };
 		142D5E5228C666ED002BA5EC /* GamesTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D5E5128C666ED002BA5EC /* GamesTableViewCellScreen.swift */; };
 		142D5E5428C66756002BA5EC /* GamesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D5E5328C66756002BA5EC /* GamesTableViewCell.swift */; };
+		144F2B4028D4D310001AE671 /* GameDaysCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144F2B3F28D4D310001AE671 /* GameDaysCollectionViewCell.swift */; };
+		144F2B4228D4D321001AE671 /* GameDaysScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144F2B4128D4D321001AE671 /* GameDaysScreen.swift */; };
 		14C23D2F28B7C79A00C34A6E /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C23D2E28B7C79A00C34A6E /* LoginScreen.swift */; };
 		14C23D3228B823DF00C34A6E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C23D3128B823DF00C34A6E /* HomeViewController.swift */; };
 		14C23D3528B83BB900C34A6E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C23D3428B83BB900C34A6E /* RegisterViewController.swift */; };
@@ -94,6 +96,8 @@
 		142D5E4E28C28265002BA5EC /* DetailChampsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailChampsScreen.swift; sourceTree = "<group>"; };
 		142D5E5128C666ED002BA5EC /* GamesTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesTableViewCellScreen.swift; sourceTree = "<group>"; };
 		142D5E5328C66756002BA5EC /* GamesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesTableViewCell.swift; sourceTree = "<group>"; };
+		144F2B3F28D4D310001AE671 /* GameDaysCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDaysCollectionViewCell.swift; sourceTree = "<group>"; };
+		144F2B4128D4D321001AE671 /* GameDaysScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDaysScreen.swift; sourceTree = "<group>"; };
 		14C23D2E28B7C79A00C34A6E /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		14C23D3128B823DF00C34A6E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		14C23D3428B83BB900C34A6E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -218,6 +222,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		144F2B3E28D4D2BB001AE671 /* CellCVDays */ = {
+			isa = PBXGroup;
+			children = (
+				144F2B3F28D4D310001AE671 /* GameDaysCollectionViewCell.swift */,
+				144F2B4128D4D321001AE671 /* GameDaysScreen.swift */,
+			);
+			path = CellCVDays;
+			sourceTree = "<group>";
+		};
 		14C23D2C28B7C72700C34A6E /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -287,6 +300,7 @@
 				14C23D5E28B9338B00C34A6E /* GamesViewController.swift */,
 				14C23D6928BA7F6C00C34A6E /* GamesScreen.swift */,
 				142D5E5028C66561002BA5EC /* Cell */,
+				144F2B3E28D4D2BB001AE671 /* CellCVDays */,
 				142D5E4428C2686E002BA5EC /* GamesDetail */,
 			);
 			path = Games;
@@ -706,6 +720,7 @@
 				14C23D6328B944C600C34A6E /* HomeScreen.swift in Sources */,
 				14C5C82428B69E7200300E6D /* GerericService.swift in Sources */,
 				14C5C82B28B6AB1200300E6D /* TabelaBrasileiraoModel.swift in Sources */,
+				144F2B4028D4D310001AE671 /* GameDaysCollectionViewCell.swift in Sources */,
 				14C23D6128B9339C00C34A6E /* ProfileViewController.swift in Sources */,
 				142D5E4F28C28265002BA5EC /* DetailChampsScreen.swift in Sources */,
 				14C5C7EB28B697CC00300E6D /* AppDelegate.swift in Sources */,
@@ -727,6 +742,7 @@
 				14C23D6C28BAAB3B00C34A6E /* ProfileScreen.swift in Sources */,
 				142D5E4828C268AF002BA5EC /* GamesDetailViewController.swift in Sources */,
 				142D5E5228C666ED002BA5EC /* GamesTableViewCellScreen.swift in Sources */,
+				144F2B4228D4D321001AE671 /* GameDaysScreen.swift in Sources */,
 				14ED799928CBA69400B48DEA /* CupPhasesScreen.swift in Sources */,
 				14ED799428CAE08200B48DEA /* CupDetailViewController.swift in Sources */,
 				14ED799D28CFD8E500B48DEA /* StatisticsGameScreen.swift in Sources */,

@@ -20,6 +20,7 @@ class GamesViewController: UIViewController {
         super.viewDidLoad()
        // self.title = "Games"
         gamesScreen.configTableViewProtocols(delegate: self, dataSource: self)
+        gamesScreen.configCollectionViewProtocols(delegate: self, dataSource: self)
     }
 }
 
@@ -45,4 +46,19 @@ extension GamesViewController: UITableViewDataSource {
         }
         return UITableViewCell()
     }
+}
+
+extension GamesViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GameDaysCollectionViewCell.identifier, for: indexPath) as? GameDaysCollectionViewCell {
+           return cell
+        }
+        return UICollectionViewCell()
+    }
+    
+    
 }
