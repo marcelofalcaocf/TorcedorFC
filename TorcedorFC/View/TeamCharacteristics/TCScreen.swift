@@ -8,7 +8,17 @@
 import UIKit
 import DropDown
 
+    protocol TCScreenProtocol: AnyObject {
+        func actionChoiceSearchBar()
+}
+
 class TCScreen: UIView {
+    
+    private weak var delegate: TCScreenProtocol?
+    
+    func delegate(delegate: TCScreenProtocol?) {
+        self.delegate = delegate
+    }
 
     lazy var backgrondOnTop: UIView = {
         let view = UIView()
@@ -36,17 +46,19 @@ class TCScreen: UIView {
         return label
     }()
     
-    lazy var choiceTextField: UITextField = {
-        let textField = UITextField()
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.autocorrectionType = .no
-        textField.backgroundColor = .gray
-        textField.borderStyle = .roundedRect
-        textField.layer.cornerRadius = 10
-        textField.keyboardType = .default
-        textField.placeholder = "Digite o time"
-        textField.textColor = UIColor(red: 40/255, green: 57/255, blue: 81/255, alpha: 1.0)
-        return textField
+    lazy var choiceSearchBar: UISearchBar = {
+        let searchBar = UISearchBar()
+        searchBar.translatesAutoresizingMaskIntoConstraints = false
+        searchBar.autocorrectionType = .no
+        searchBar.backgroundColor = .gray
+        // textField.borderStyle = .roundedRect
+        searchBar.placeholder = "Escreva seu time"
+        searchBar.layer.cornerRadius = 10
+        searchBar.keyboardType = .default
+        searchBar.placeholder = "Digite o time"
+        searchBar.searchTextField.textColor = UIColor(red: 40/255, green: 57/255, blue: 81/255, alpha: 1.0)
+        // searchBar.textColor = UIColor(red: 40/255, green: 57/255, blue: 81/255, alpha: 1.0)
+        return searchBar
     }()
     
     lazy var timesTableView: UITableView = {
@@ -72,7 +84,7 @@ class TCScreen: UIView {
         self.configBackgrondOnTop()
         self.configLogoAppImageView()
         self.configTCLabel()
-        self.configChoiceTextField()
+        self.configChoiceSearchBar()
         self.configTimesTableView()
     }
     
@@ -84,8 +96,12 @@ class TCScreen: UIView {
         self.addSubview(backgrondOnTop)
         self.backgrondOnTop.addSubview(logoAppImageView)
         self.backgrondOnTop.addSubview(tcLabel)
-        self.addSubview(choiceTextField)
+        self.addSubview(choiceSearchBar)
         self.addSubview(timesTableView)
+    }
+    
+    @objc private func tappedChoiceSearchBar() {
+        self.delegate?.actionChoiceSearchBar()
     }
     
     required init?(coder: NSCoder) {
@@ -116,8 +132,8 @@ class TCScreen: UIView {
         }
     }
     
-    func configChoiceTextField() {
-        self.choiceTextField.snp.makeConstraints { make in
+    func configChoiceSearchBar() {
+        self.choiceSearchBar.snp.makeConstraints { make in
             make.top.equalTo(self.backgrondOnTop.snp.bottom)
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(45)
@@ -126,7 +142,7 @@ class TCScreen: UIView {
     
     func configTimesTableView() {
         self.timesTableView.snp.makeConstraints { make in
-            make.top.equalTo(self.choiceTextField.snp.bottom)
+            make.top.equalTo(self.choiceSearchBar.snp.bottom)
             make.leading.trailing.equalToSuperview()
             make.bottom.equalToSuperview()
         }

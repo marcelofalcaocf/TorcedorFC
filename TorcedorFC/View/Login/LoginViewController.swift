@@ -10,7 +10,7 @@ import UIKit
 class LoginViewController: UIViewController {
     
     var loginScreen: LoginScreen?
-    let viewModel: ListaDeCampeonatoViewModel = .init()
+    let viewModel: HomeViewModel = .init()
     
     override func loadView() {
         self.loginScreen = LoginScreen()
@@ -59,7 +59,7 @@ extension LoginViewController: LoginScreenProtocol {
 }
 
 
-extension LoginViewController: ListaDeCampeonatoViewModelDelegate {
+extension LoginViewController: HomeViewModelDelegate {
     func success() {
         print("Deu bom!")
     }

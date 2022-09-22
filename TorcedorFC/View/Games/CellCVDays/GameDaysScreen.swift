@@ -14,7 +14,7 @@ class GameDaysScreen: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.textColor = .white
-        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.font = UIFont.boldSystemFont(ofSize: 22)
         label.text = "Jogos Do Dia"
         label.numberOfLines = 0
         return label
@@ -42,7 +42,7 @@ class GameDaysScreen: UIView {
     
     private func configDayGame() {
         dayGame.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(2)
+            make.top.equalToSuperview().offset(10)
             make.leading.equalToSuperview().offset(2)
             make.trailing.equalToSuperview().inset(2)
         }

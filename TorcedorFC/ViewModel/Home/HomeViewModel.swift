@@ -7,19 +7,19 @@
 
 import UIKit
 
-protocol ListaDeCampeonatoViewModelDelegate: AnyObject {
+protocol HomeViewModelDelegate: AnyObject {
     func success()
     func error()
 }
 
-class ListaDeCampeonatoViewModel {
+class HomeViewModel {
     
-    private var delegate: ListaDeCampeonatoViewModelDelegate?
+    private var delegate: HomeViewModelDelegate?
     private let service: CampeonatoService = .init()
     var campeonatos: [ListaDeCampeonato] = []
     var filterCampeonatos: [ListaDeCampeonato] = []
     
-    public func delegate(delegate: ListaDeCampeonatoViewModelDelegate) {
+    public func delegate(delegate: HomeViewModelDelegate) {
         self.delegate = delegate
     }
     

@@ -10,7 +10,7 @@ import UIKit
 class HomeViewController: UIViewController {
 
     var homeScreen: HomeScreen = .init()
-    let viewModel: ListaDeCampeonatoViewModel = .init()
+    let viewModel: HomeViewModel = .init()
     
     override func loadView() {
         self.homeScreen = HomeScreen()
@@ -26,7 +26,7 @@ class HomeViewController: UIViewController {
 
 }
 
-extension HomeViewController: ListaDeCampeonatoViewModelDelegate {
+extension HomeViewController: HomeViewModelDelegate {
     func success() {
         DispatchQueue.main.async {
             self.homeScreen.tableView.reloadData()
