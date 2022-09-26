@@ -66,6 +66,7 @@ class TCScreen: UIView {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = UIColor(red: 40/255, green: 57/255, blue: 81/255, alpha: 1.0)
         tableView.layer.cornerRadius = 10
+        tableView.register(TeamDetailsTableViewCell.self, forCellReuseIdentifier: TeamDetailsTableViewCell.identifier)
         return tableView
     }()
     
@@ -98,6 +99,11 @@ class TCScreen: UIView {
         self.backgrondOnTop.addSubview(tcLabel)
         self.addSubview(choiceSearchBar)
         self.addSubview(timesTableView)
+    }
+    
+    public func configTableViewProtocols(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
+        self.timesTableView.delegate = delegate
+        self.timesTableView.dataSource = dataSource
     }
     
     @objc private func tappedChoiceSearchBar() {
