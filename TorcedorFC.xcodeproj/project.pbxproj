@@ -53,6 +53,8 @@
 		14C5C82728B6A61D00300E6D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C5C82628B6A61D00300E6D /* HomeViewModel.swift */; };
 		14C5C82928B6AA2600300E6D /* TabelaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C5C82828B6AA2600300E6D /* TabelaService.swift */; };
 		14C5C82B28B6AB1200300E6D /* TabelaBrasileiraoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C5C82A28B6AB1200300E6D /* TabelaBrasileiraoModel.swift */; };
+		14E6CFF528FE1DDB00F71DD6 /* RedefinePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E6CFF428FE1DDB00F71DD6 /* RedefinePasswordViewController.swift */; };
+		14E6CFF728FE1E2300F71DD6 /* RedefinePasswordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E6CFF628FE1E2300F71DD6 /* RedefinePasswordScreen.swift */; };
 		14E7E7D428E1ED9E00CF2F6A /* TeamDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E7E7D328E1ED9E00CF2F6A /* TeamDetailsScreen.swift */; };
 		14E7E7D628E1EDE200CF2F6A /* TeamDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E7E7D528E1EDE200CF2F6A /* TeamDetailsTableViewCell.swift */; };
 		14ED799228CADE8E00B48DEA /* CupDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ED799128CADE8E00B48DEA /* CupDetailScreen.swift */; };
@@ -137,6 +139,8 @@
 		14C5C82628B6A61D00300E6D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		14C5C82828B6AA2600300E6D /* TabelaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabelaService.swift; sourceTree = "<group>"; };
 		14C5C82A28B6AB1200300E6D /* TabelaBrasileiraoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabelaBrasileiraoModel.swift; sourceTree = "<group>"; };
+		14E6CFF428FE1DDB00F71DD6 /* RedefinePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedefinePasswordViewController.swift; sourceTree = "<group>"; };
+		14E6CFF628FE1E2300F71DD6 /* RedefinePasswordScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedefinePasswordScreen.swift; sourceTree = "<group>"; };
 		14E7E7D328E1ED9E00CF2F6A /* TeamDetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsScreen.swift; sourceTree = "<group>"; };
 		14E7E7D528E1EDE200CF2F6A /* TeamDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		14ED799128CADE8E00B48DEA /* CupDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupDetailScreen.swift; sourceTree = "<group>"; };
@@ -369,6 +373,7 @@
 		14C23D5928B932CE00C34A6E /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				14E6CFF328FE1CFD00F71DD6 /* RedefinePassword */,
 				14C23D6028B9339C00C34A6E /* ProfileViewController.swift */,
 				14C23D6B28BAAB3B00C34A6E /* ProfileScreen.swift */,
 			);
@@ -471,6 +476,15 @@
 				144F2B4328D7C821001AE671 /* Home */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		14E6CFF328FE1CFD00F71DD6 /* RedefinePassword */ = {
+			isa = PBXGroup;
+			children = (
+				14E6CFF428FE1DDB00F71DD6 /* RedefinePasswordViewController.swift */,
+				14E6CFF628FE1E2300F71DD6 /* RedefinePasswordScreen.swift */,
+			);
+			path = RedefinePassword;
 			sourceTree = "<group>";
 		};
 		14E7E7D228E1ECB100CF2F6A /* Cell */ = {
@@ -799,6 +813,7 @@
 				142D5E5228C666ED002BA5EC /* GamesTableViewCellScreen.swift in Sources */,
 				144F2B4228D4D321001AE671 /* GameDaysScreen.swift in Sources */,
 				14E7E7D428E1ED9E00CF2F6A /* TeamDetailsScreen.swift in Sources */,
+				14E6CFF528FE1DDB00F71DD6 /* RedefinePasswordViewController.swift in Sources */,
 				14ED799928CBA69400B48DEA /* CupPhasesScreen.swift in Sources */,
 				14ED799428CAE08200B48DEA /* CupDetailViewController.swift in Sources */,
 				14ED799D28CFD8E500B48DEA /* StatisticsGameScreen.swift in Sources */,
@@ -811,6 +826,7 @@
 				14C23D6828B9578B00C34A6E /* ChampionshipsScreen.swift in Sources */,
 				14C23D4E28B85A2300C34A6E /* ForgotPasswordViewController.swift in Sources */,
 				142D5E4A28C270D5002BA5EC /* FaseService.swift in Sources */,
+				14E6CFF728FE1E2300F71DD6 /* RedefinePasswordScreen.swift in Sources */,
 				14C23D3528B83BB900C34A6E /* RegisterViewController.swift in Sources */,
 				14C5C82228B69A8F00300E6D /* ListaDeCampeonatosModel.swift in Sources */,
 				14C23D3228B823DF00C34A6E /* HomeViewController.swift in Sources */,

@@ -7,7 +7,17 @@
 
 import UIKit
 
+protocol ProfileScreenProtocol: AnyObject {
+    func actionRedefinePasswordButton()
+}
+
 class ProfileScreen: UIView {
+    
+    private weak var delegate: ProfileScreenProtocol?
+    
+    func delegate(delegate: ProfileScreenProtocol?) {
+        self.delegate = delegate
+    }
     
     lazy var backgrondOnTop: UIView = {
         let view = UIView()
@@ -87,7 +97,7 @@ class ProfileScreen: UIView {
         button.clipsToBounds = true
         button.layer.cornerRadius = 7.5
         button.backgroundColor = .white
-        // button.addTarget(self, action: #selector(self.tappedForgotPasswordButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(self.tappedRedefinePasswordButton), for: .touchUpInside)
         return button
     }()
     
@@ -134,6 +144,10 @@ class ProfileScreen: UIView {
         self.addSubview(favoriteTimeButton)
         self.addSubview(resetPasswordButton)
         self.addSubview(exitAppButton)
+    }
+    
+    @objc private func tappedRedefinePasswordButton() {
+        delegate?.actionRedefinePasswordButton()
     }
     
     required init?(coder: NSCoder) {
